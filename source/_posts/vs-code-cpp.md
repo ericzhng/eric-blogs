@@ -1,7 +1,7 @@
 ---
 title: 'How to set up vs-code for C++ in Windows 10?'
 date: 2018-10-10
-banner: /eric-blogs/gallery/little-girl.jpg
+banner: /eric-blogs/images_posts/vscode_cpp.png
 thumbnail: /eric-blogs/images/vs-code.png
 categories:
 - Software

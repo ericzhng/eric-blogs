@@ -1,7 +1,7 @@
 ---
 title: 'How to set up Jekyll for github pages in Windows?'
 date: 2018-09-14
-banner: /eric-blogs/gallery/music2.jpg
+banner: /eric-blogs/images_posts/github-jekyll.jpg
 thumbnail: /eric-blogs/images/github.svg
 categories:
 - Software

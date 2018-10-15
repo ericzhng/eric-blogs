@@ -1,7 +1,7 @@
 ---
 title: 'How to enable CUDA C/C++ support in vs-code in Windows 10?'
 date: 2018-10-11
-banner: /eric-blogs/gallery/music1.jpg
+banner: /eric-blogs/images_posts/vscode-cuda.png
 thumbnail: /eric-blogs/images/vs-code.png
 categories:
 - Software

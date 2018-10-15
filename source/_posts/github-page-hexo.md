@@ -1,7 +1,7 @@
 ---
 title: "Set up hexo for GitHub page"
 date: 2018-10-13 19:40:00
-banner: /eric-blogs/gallery/arabic-pyramid.jpg
+banner: /eric-blogs/images_posts/github-hexo.png
 thumbnail: /eric-blogs/images/hexo-logo.png
 categories:
 - Software

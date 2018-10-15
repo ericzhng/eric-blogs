@@ -1,7 +1,7 @@
 ---
 title: 'Use of tensorflow model API in Google Colaboratory?'
 date: 2018-10-13
-banner: /eric-blogs/gallery/china-great-wall.jpg
+banner: /eric-blogs/images_posts/colab-tensorflow.jpg
 thumbnail: /eric-blogs/images/tensorflow.jpg
 categories:
 - Software

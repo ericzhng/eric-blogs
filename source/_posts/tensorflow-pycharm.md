@@ -1,7 +1,7 @@
 ---
 title: 'How to set up tensorflow in PyCharm in Windows?'
 date: 2018-09-18
-banner: /eric-blogs/gallery/guitarist.jpg
+banner: /eric-blogs/images_posts/tensorflow-pycharm.jpg
 thumbnail: /eric-blogs/images/tensorflow.jpg
 categories:
 - Software
