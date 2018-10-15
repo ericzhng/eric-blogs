@@ -89,5 +89,5 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:ericzhng/eric-blogs.git  #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: gh-pages #published
+  repo: https://github.com/ericzhng/eric-blogs.git
+  branch: gh-pages
