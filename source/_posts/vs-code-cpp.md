@@ -1,5 +1,6 @@
 ---
-title: 'How to set up vs-code for C++ in Windows 10?'
+
+title: 'Setup vs-code for C/C++ in Windows 10'
 date: 2018-10-10
 banner: /eric-blogs/images_posts/vscode_cpp.png
 thumbnail: /eric-blogs/images/vs-code.png
@@ -11,9 +12,20 @@ tags:
   - bash
   - vs-code
   - WSL
+
 ---
 
-In this blog, I want to show users how to set up vs-code for C/C++ code in Windows 10 using Linux subsystem, or Windows Subsystem for Linux (WSL).
+Visual Studio Code (vs-code) is a very light and convenient IDE for programming using C/C++, Python and so many other languages. Thus in this blog, I want to show users how to setup **vs-code** for C/C++ programming using Linux subsystem in Windows 10. The subsystem is usually referred to as Windows Subsystem for Linux (WSL). 
+
+<!-- TOC -->
+
+    - [Introduction](#introduction)
+    - [1. Enable Linux Bash shell in Windows 10](#1-enable-linux-bash-shell-in-windows-10)
+    - [2. Install vs-code in Windows 10](#2-install-vs-code-in-windows-10)
+    - [3. Write, debug and run C/C++ code in vs-code.](#3-write-debug-and-run-cc-code-in-vs-code)
+- [1.](#1)
+
+<!-- /TOC -->
 
 <!--more-->
 
@@ -127,11 +139,12 @@ There are some major steps you need to take, in order to run/debug C/C++ code us
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "command": "bash",
+    //"runner": "terminal",
     "tasks": [
         {
             "label": "build",
             "type": "shell",
-            "command": "g++ -g test.cpp -o maintest.out",
+            "command": "g++ -g test.cpp -o maintest.out && echo 'success!'",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -150,6 +163,7 @@ There are some major steps you need to take, in order to run/debug C/C++ code us
         }
     ]
 }
+
 ```
 
  **launch.json**
@@ -195,6 +209,20 @@ There are some major steps you need to take, in order to run/debug C/C++ code us
     ]
 }
 ```
+
+
+Sometimes after you specified everything above, you might come to some errors shown below:
+
+# 1. 
+
+Solution: Open settings in vs-code, using the `CTRL+,` keyboard shortcut, or File → Preferences → Settings.
+
+Search for `terminal.integrated.shell.windows`, use your bash.exe path to substitute the original exe path. For me, it is `C:\Windows\WinSxS\amd64_microsoft-windows-lxss-bash_31bf3856ad364e35_10.0.17134.1_none_251beae725bc7de5/bash.exe`.
+
+Then re-run your code, using shortcut CTRL+SHIFT+B, you should have the compiler running in WSL bash now.
+
+
+
 
 Reference:
 ------
