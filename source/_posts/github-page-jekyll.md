@@ -1,5 +1,6 @@
 ---
-title: 'How to set up Jekyll for github pages in Windows?'
+
+title: 'Set up Jekyll for GitHub page in Windows'
 date: 2018-09-14
 banner: /eric-blogs/images_posts/github-jekyll.jpg
 thumbnail: /eric-blogs/images/github.svg
@@ -11,6 +12,8 @@ tags:
   - Jekyll
   - GitHub
   - WSL
+  - Website
+
 ---
 
 In this blog, I want to talk about how to set up Jekyll in Windows environment, mainly Windows 10, since you can enable the Linux bash.
@@ -76,6 +79,6 @@ In this blog, I want to talk about how to set up Jekyll in Windows environment, 
 
 Reference:
 ------
-* [1] [How to Enable the Linux Bash Shell in Windows 10?](https://www.laptopmag.com/articles/use-bash-shell-windows-10)
-* [2] [Setting up your GitHub Pages site locally with Jekyll.](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
-* [3] [Jekyll on Windows.](https://jekyllrb.com/docs/installation/windows/)
+* 1. [How to Enable the Linux Bash Shell in Windows 10](https://www.laptopmag.com/articles/use-bash-shell-windows-10).
+* 2. [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/).
+* 3. [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/).

@@ -44,7 +44,7 @@ This blog shows how to install **tensorflow** for python in Windows 10, preferab
 
 ![image missing](pycharm/add-exist-python-interpreter.png "Add Python Interpreter")
 
-> 5. Go to File->Settings, search for *Porject Interpreter*, ensure that corresponding python version is used as the interpreter. Then install the python packages you need to install by clicking "+" on top right, such as `numpy, matplotlib, pandas, python-opencv` etc.
+> 5. Go to File -> Settings, search for *Porject Interpreter*, ensure that corresponding python version is used as the interpreter. Then install the python packages you need to install by clicking "+" on top right, such as `numpy, matplotlib, pandas, python-opencv` etc.
 
 > 6. To install `tensorflow`, use pip. Click *Start* in Windows (bottom left of your screen), type *Anaconda Prompt* and open the command window. Type in *activate tensorflow-test* to activate your virtual environment in Anaconda. Then type `pip install tensorflow` to install tensorflow.
 
@@ -53,7 +53,7 @@ This blog shows how to install **tensorflow** for python in Windows 10, preferab
 	`python --version`
 	`pip --version`
 
-> 8. To test whether your installation works, create a python file named *test.py*. Copy the following python scripts in *test.py* and execute it in PyCharm. If it outputs the current tensorflow version, it means that **tensorflow** is successfully installed.
+> 8. To test whether your installation works, create a python file named `test.py`. Copy the following python scripts in `test.py` and execute it in PyCharm. If it outputs the current tensorflow version, it means that **tensorflow** is successfully installed.
 
 ```
 import tensorflow as tf
@@ -75,13 +75,14 @@ print(tf.__version__)
 
 - ![image missing](pycharm/error.png) **"tensorflow-*.whl is not supported wheel on this platform"**
   * **Reason**: Currently tensorflow is only supported up to Python 36. While newest Anaconda comes with Python 37 package.
-  * **Solution**: You can go to File->Settings, create a new virtual conda environment, and select Python 36. Then install tensorflow either from repository or downloaded file.
+  * **Solution**: You can go to File -> Settings, create a new virtual conda environment, and select Python 36. Then install tensorflow either from repository or downloaded file.
 
 ![image missing](pycharm/create-conda-envs.png "Add Python Interpreter")
 
 
 ## Reference
 ------
-* 1. [Check SSE/AVX instruction support](https://gist.github.com/hi2p-perim/7855506#file-ssecheck-cpp)
-* 2. [Issues of installing tensorflow with DLL error](https://github.com/tensorflow/tensorflow/issues/17761)
-* 3. [Build from source on Windows](https://www.tensorflow.org/install/source_windows)
+
+* 1. [Check SSE/AVX instruction support](https://gist.github.com/hi2p-perim/7855506#file-ssecheck-cpp).
+* 2. [Issues of installing tensorflow with DLL error](https://github.com/tensorflow/tensorflow/issues/17761).
+* 3. [Build from source on Windows](https://www.tensorflow.org/install/source_windows).

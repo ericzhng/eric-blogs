@@ -19,11 +19,15 @@ Visual Studio Code (vs-code) is a very light and convenient IDE for programming 
 
 <!-- TOC -->
 
-    - [Introduction](#introduction)
+- [Introduction](#introduction)
+- [Major Steps](#major-steps)
     - [1. Enable Linux Bash shell in Windows 10](#1-enable-linux-bash-shell-in-windows-10)
     - [2. Install vs-code in Windows 10](#2-install-vs-code-in-windows-10)
-    - [3. Write, debug and run C/C++ code in vs-code.](#3-write-debug-and-run-cc-code-in-vs-code)
-- [1.](#1)
+    - [3. Debug and run C/C++ code in vs-code](#3-debug-and-run-cc-code-in-vs-code)
+    - [Tasks configuration: refer to file **tasks.json**.](#tasks-configuration-refer-to-file-tasksjson)
+    - [Debug configuration: refer to file **launch.json**.](#debug-configuration-refer-to-file-launchjson)
+- [Common errors](#common-errors)
+- [Reference](#reference)
 
 <!-- /TOC -->
 
@@ -31,64 +35,73 @@ Visual Studio Code (vs-code) is a very light and convenient IDE for programming 
 
 ## Introduction
 
-I've started following vs-code (Visual Studio Code) since 2017, first in Ubuntu, then in Windows. But I've never actually debugged C/C++ code in Windows using vs-code, mainly because there isn't a C/C++ compiler free of charge provided in Windows, and usually you have to configure a virtual machine [1] in order to debug/run C/C++ program.
+I've started using vs-code long time ago, first in Ubuntu, then in Windows. But I've never actually debugged C/C++ code in Windows using vs-code, mainly because there isn't a C/C++ compiler free of charge provided in Windows, and usually you have to configure a virtual machine to run Linux to debug/run C/C++ program in Windows.
 
-Putting that aside, vs-code is such a convenient tool that I definitely recommend for programmers to adopt it. It is much lighter than Visual Studio and also gives users more freedom to configure. 
+## Major Steps
 
-There are some major steps you need to take, in order to run/debug C/C++ code using vs-code in Windows 10.
- 1. Enable Linux Bash shell in Windows 10.
- 2. Install vs-code in Windows 10.
- 3. Write, debug and run C/C++ code in vs-code.
+There are some major steps you need to take in order to run/debug C/C++ code using vs-code in Windows 10. Please follow steps provided below.
 
-## 1. Enable Linux Bash shell in Windows 10
- 1. Windows 10 Settings -> Update And Security -> For Developers -> Turn on Developer mode.
- 2. Control Panel -> Programs -> Windows Subsystem for Linux, check it and click OK to return.
- 3. Open Start at lower left of the screen and type in bash, run it.
- 4. In the bash.exe, it might prompt a message asking to install the system, type "Y" to continue.
- 5. If not, go to Microsoft Store, search for Ubuntu, and install it. You might need to restart the computer.
- 6. After installation, create your account and password for Linux.
- 7. Every time you want to start bash, either start cmd and type bash, or search for bash directly.
- 
-## 2. Install vs-code in Windows 10
- 1. Downloading newest version vs-code [here](https://code.visualstudio.com/).
- 2. Install it in Windows 10.
- 3. After installation, you probably want to install a few extensions for C/C++ programming as well. Here is a list of possible extensions you might want to use. Then you are free to go.
-   - C/C++
-   - C/C++ Intellisense, etc.
- 4. The [official website](https://code.visualstudio.com/docs/languages/cpp) contains some pretty good tutorials where you can learn configuring vs-code. 
+### 1. Enable Linux Bash shell in Windows 10
 
-## 3. Write, debug and run C/C++ code in vs-code.
- 1. Create a new folder named test-cpp-vs-code, and use vs-code to open the folder.
+> 1. Windows 10 **Settings** -> Update And Security -> For Developers -> Turn on **Developer mode**.
+
+>  2. **Control Panel** -> Programs -> Programs and Features -> Turn Windows features on or off, the in the dialog, look for **Windows Subsystem for Linux**, check and click OK.
+
+>  3. Open Start at lower left of the screen and type in bash, click Enter to open it.
+>  4. In the bash, it might prompt a message asking to install the system, type "Y" to continue.
+>  5. If not, go to Microsoft Store, search for **Ubuntu**, and install it. You might need to restart the computer.
+
+>  6. Open bash again, you will be asked to create your account and password for Linux.
+
+>  7. Every time you want to start bash, either **start cmd and type bash**, or **search for bash** directly.
+
+### 2. Install vs-code in Windows 10
+
+> 1. Downloading newest version vs-code [here](https://code.visualstudio.com/).
+> 2. Install it in Windows 10.
+> 3. After installation, you probably want to install a few extensions for C/C++ programming as well. Here is a list of possible extensions you might want to use.
+
+> - `C/C++`
+> - `C/C++ Intellisense`
+> - ...
+
+> 4. The [official website](https://code.visualstudio.com/docs/languages/cpp) contains some pretty good tutorials where you can learn configuring vs-code. 
+
+### 3. Debug and run C/C++ code in vs-code
+
+> 1. Create a new folder named **test-cpp-vs-code**, and use vs-code to open the folder.
    - You can create a test.cpp file in vs-code and copy the following code:
    
-	```
+```
 	#include <stdio.h>
 	#include <math.h>
 	#include <iostream>
 
 	int main() {
 		char strName[] = "Eric";
-
 		std::cout<< "Hello" << strName << std::endl;
-
 		return 0;
 	}
-	```
-	
- 2. Next step, setting up configuration files for vs-code.
-   - IntelliSense: generate a `c_cpp_properties.json` file by running **C/Cpp: Edit configurations** command from the Command Palette (Ctrl+Shift+P) and add missing include header directories.
-   - Build your code: create a `tasks.json` file by running *Tasks: Configure Tasks* comand in Command Palette, add the compiler information and tasks. To build the prject, run Tasks: Run Build Tasks (Ctrl+Shift+B).
-   - Debug your code: generate a launch.json file, by going to Debug view, click the configure icon and then select C++ (Windows) from teh Select Environment dropdown.
-   
-   - Some common shortcuts: 
-     - Format Document: Shift+Alt+F, Ctrl+K/Ctrl+F
-     - Search for symbols: Ctrl+Shift+O
-	 - Go to definition: F12
-	 - To build: Ctrl+Shift+B
+```
+
+> 2. Next step, setting up configuration files for vs-code.
+  > - IntelliSense: generate a `c_cpp_properties.json` file by running **C/Cpp: Edit configurations** command from the Command Palette (Ctrl+Shift+P) and add missing include header directories.
+  >- Build your code: create a `tasks.json` file by running **Tasks: Configure Tasks** comand in Command Palette, add the compiler information and tasks. To build the prject, run **Tasks: Run Build Tasks** (Ctrl+Shift+B).
+  > - Debug your code: generate a `launch.json` file, by going to Debug view, click the configure icon and then select C++ (Windows) from teh Select Environment dropdown.
+
+- Some common shortcuts: 
+
+> | Functions | Shortcuts |
+> |-------|-------|
+> |Format document    | **Shift+Alt+F** or **Ctrl+K/Ctrl+F**|
+> |Search for symbols | **Ctrl+Shift+O**|
+> | Go to definition  | **F12**|
+> |Build the project  | **Ctrl+Shift+B**|
  
- For more details about the settings files, please refer to my GitHub repository for the [sample source code](https://github.com/ericzhng/test-vs-code-windows-subsysytem-linux).
+ You can refer to my GitHub repository for [sample source code](https://github.com/ericzhng/test-vs-code-windows-subsysytem-linux). I've also attached the configuration files for vs-code, so you can have a glimpse.
  
- **c_cpp_properties.json**
+ ### Intellise configuration: refer to file **c_cpp_properties.json**.
+ 
 ```
 {
     "configurations": [
@@ -132,7 +145,8 @@ There are some major steps you need to take, in order to run/debug C/C++ code us
 }
 ```
  
- **tasks.json**
+### Tasks configuration: refer to file **tasks.json**.
+
 ```
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
@@ -166,7 +180,8 @@ There are some major steps you need to take, in order to run/debug C/C++ code us
 
 ```
 
- **launch.json**
+### Debug configuration: refer to file **launch.json**.
+
 ```
 {
     // Use IntelliSense to learn about possible attributes.
@@ -210,21 +225,20 @@ There are some major steps you need to take, in order to run/debug C/C++ code us
 }
 ```
 
+## Common errors
 
 Sometimes after you specified everything above, you might come to some errors shown below:
 
-# 1. 
+- ![image missing](pycharm/error.png) **Commands not found!**
+  * **Reason**: When running the build or run, you are executing in **Windows command prompt**, which doesn't have a compiler installed. The **gcc** compiler is installed in Linux subsystem, so you should refer to **bash** to run the build command.
+  * **Solution**: 
+    * Open settings in vs-code, using the keyboard shortcut `CTRL+,`, or File → Preferences → Settings. 
+    * Search for `terminal.integrated.shell.windows`, use your bash.exe path to substitute the original exe path.
+    * For me, it is `C:\Windows\WinSxS\amd64_microsoft-windows-lxss-bash_31bf3856ad364e35_10.0.17134.1_none_251beae725bc7de5/bash.exe`. 
+    * Then re-run your code, using shortcut **CTRL+SHIFT+B**, you should have the compiler running in WSL bash now.
 
-Solution: Open settings in vs-code, using the `CTRL+,` keyboard shortcut, or File → Preferences → Settings.
-
-Search for `terminal.integrated.shell.windows`, use your bash.exe path to substitute the original exe path. For me, it is `C:\Windows\WinSxS\amd64_microsoft-windows-lxss-bash_31bf3856ad364e35_10.0.17134.1_none_251beae725bc7de5/bash.exe`.
-
-Then re-run your code, using shortcut CTRL+SHIFT+B, you should have the compiler running in WSL bash now.
-
-
-
-
-Reference:
+## Reference
 ------
-* [1] [Configure complier path using Windows Subsystem for Linux](https://github.com/Microsoft/vscode-cpptools/blob/master/Documentation/LanguageServer/Windows%20Subsystem%20for%20Linux.md).
-* [2] [Windows 10's Windows Subsystem for Linux](https://github.com/Microsoft/vscode-cpptools/blob/master/Documentation/Debugger/gdb/Windows%20Subsystem%20for%20Linux.md)
+
+* 1. [Configure complier path using Windows Subsystem for Linux](https://github.com/Microsoft/vscode-cpptools/blob/master/Documentation/LanguageServer/Windows%20Subsystem%20for%20Linux.md).
+* 2. [Windows 10's Windows Subsystem for Linux](https://github.com/Microsoft/vscode-cpptools/blob/master/Documentation/Debugger/gdb/Windows%20Subsystem%20for%20Linux.md).

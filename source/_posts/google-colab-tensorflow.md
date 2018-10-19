@@ -1,5 +1,6 @@
 ---
-title: 'Use of tensorflow model API in Google Colaboratory?'
+
+title: 'Use tensorflow model API in Google Colaboratory'
 date: 2018-10-13
 banner: /eric-blogs/images_posts/colab-tensorflow.jpg
 thumbnail: /eric-blogs/images/tensorflow.jpg
@@ -11,6 +12,7 @@ tags:
   - Windows
   - Tensorflow
   - Google Colab
+
 ---
 
 ## Introduction
