@@ -3,22 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>How to set up tensorflow in PyCharm in Windows? | _PSN_ HOMEPAGE</title>
+    <title>Run CUDA C/C++ in Jupyter notebook in Google Colaboratory | _PSN_ HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="In this blog, I would like to show you how to set up tensorflow in PyCharm in Window.">
-<meta name="keywords" content="Windows,PyCharm,Tensorflow">
+    <meta name="description" content="I learnt to run cuda C/C++ program in google Colab using the Jupyter notebook from here. I will show some details of the implementations at a later time.">
+<meta name="keywords" content="Windows,Jupyter,CUDA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to set up tensorflow in PyCharm in Windows?">
-<meta property="og:url" content="http://ericzhng.github.io/2018/09/18/tensorflow-pycharm/index.html">
+<meta property="og:title" content="Run CUDA C&#x2F;C++ in Jupyter notebook in Google Colaboratory">
+<meta property="og:url" content="http://ericzhng.github.io/eric-blogs/2018/09/18/google-colab-cuda-cpp/index.html">
 <meta property="og:site_name" content="_PSN_ HOMEPAGE">
-<meta property="og:description" content="In this blog, I would like to show you how to set up tensorflow in PyCharm in Window.">
+<meta property="og:description" content="I learnt to run cuda C/C++ program in google Colab using the Jupyter notebook from here. I will show some details of the implementations at a later time.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://ericzhng.github.io/eric-blogs/images/tensorflow.jpg">
-<meta property="og:updated_time" content="2018-10-15T04:34:07.452Z">
+<meta property="og:image" content="http://ericzhng.github.io/eric-blogs/images/google-colab.png">
+<meta property="og:updated_time" content="2018-10-19T00:20:30.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to set up tensorflow in PyCharm in Windows?">
-<meta name="twitter:description" content="In this blog, I would like to show you how to set up tensorflow in PyCharm in Window.">
-<meta name="twitter:image" content="http://ericzhng.github.io/eric-blogs/images/tensorflow.jpg">
+<meta name="twitter:title" content="Run CUDA C&#x2F;C++ in Jupyter notebook in Google Colaboratory">
+<meta name="twitter:description" content="I learnt to run cuda C/C++ program in google Colab using the Jupyter notebook from here. I will show some details of the implementations at a later time.">
+<meta name="twitter:image" content="http://ericzhng.github.io/eric-blogs/images/google-colab.png">
     
 
     
@@ -176,11 +176,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                6
+                7
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                12
+                17
                 <span>tags</span>
             </div>
         </div>
@@ -228,12 +228,12 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="post-tensorflow-pycharm" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-google-colab-cuda-cpp" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             
 	
-		<img src="/eric-blogs/gallery/guitarist.jpg" class="article-banner" />
+		<img src="/eric-blogs/images_posts/google-colab-cuda-cpp.png" class="article-banner" />
 	
 
 
@@ -244,7 +244,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            How to set up tensorflow in PyCharm in Windows?
+            Run CUDA C/C++ in Jupyter notebook in Google Colaboratory
         </h1>
     
 
@@ -253,7 +253,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/eric-blogs/2018/09/18/tensorflow-pycharm/">
+        <a href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/">
             <time datetime="2018-09-18T04:00:00.000Z" itemprop="datePublished">2018-09-18</time>
         </a>
     </div>
@@ -262,13 +262,13 @@ ga('send', 'pageview');
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a>
+        <a class="article-category-link" href="/eric-blogs/categories/Techniques/">Techniques</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Techniques/Cpp/">Cpp</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/eric-blogs/tags/PyCharm/">PyCharm</a>, <a class="tag-link" href="/eric-blogs/tags/Tensorflow/">Tensorflow</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
+        <a class="tag-link" href="/eric-blogs/tags/CUDA/">CUDA</a>, <a class="tag-link" href="/eric-blogs/tags/Jupyter/">Jupyter</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
     </div>
 
                     </div>
@@ -279,44 +279,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>In this blog, I would like to show you how to set up tensorflow in PyCharm in Window.</p>
+            <p>I learnt to run cuda C/C++ program in google Colab using the Jupyter notebook from <a href="https://medium.com/@iphoenix179/running-cuda-c-c-in-jupyter-or-how-to-run-nvcc-in-google-colab-663d33f53772" target="_blank" rel="noopener">here</a>. I will show some details of the implementations at a later time.</p>
 <a id="more"></a>
-<h1 id="Major-steps"><a href="#Major-steps" class="headerlink" title="Major steps"></a>Major steps</h1><ul>
-<li><p>Download PyCharm community edition from <a href="https://www.jetbrains.com/pycharm/download/#section=windows" target="_blank" rel="noopener">PyCharm website</a> and install it in Windows 10.</p>
-</li>
-<li><p>Download and install Anaconda from <a href="https://www.anaconda.com/download/#windows" target="_blank" rel="noopener">Anaconda website</a>.</p>
-</li>
-<li><p>Open PyCharm, click Create New Project, give the folder a name in Location, select Existing interpreter of python.exe in Anaconda3 folder, and click OK.</p>
-</li>
-<li><p>Go to File-&gt;Settings-&gt;Project:[your project name]-&gt;Project Interpreter, you can choose different interpreters you installed before, or create new interpreter as conda virtual environment.</p>
-</li>
-<li><p>Click ‘+’ to install new packages: tensorflow, opencv, etc.</p>
-</li>
-<li><p>Go back to the editor, once you are done installing the packages, right click on the project, New-&gt;Python File, naming it as test.py.</p>
-</li>
-<li><p>Put following code in test.py file, and run the test. If it passes, then the installation is successful. Otherwise there might be some errors.</p>
-<ul>
-<li><code>import tensorflow as tf&#39; &#39;print(tf.__version__)</code></li>
-</ul>
-</li>
-</ul>
-<h1 id="Some-common-errors"><a href="#Some-common-errors" class="headerlink" title="Some common errors"></a>Some common errors</h1><h2 id="Error-1"><a href="#Error-1" class="headerlink" title="Error 1"></a>Error 1</h2><ul>
-<li><p>When executing step 7, you may came across errors like the following:</p>
-<ul>
-<li>Error Messages:<br>“Traceback (most recent call last):<br>File “C:\Users\Hui Zhang\AppData\Local\Programs\Python\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow.py”, line 58, in <module> from tensorflow.python.pywrap_tensorflow_internal import *<br>File “C:\Users\Hui Zhang\AppData\Local\Programs\Python\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py”, line 28, in <module> _pywrap_tensorflow_internal = swig_import_helper()<br>File “C:\Users\Hui Zhang\AppData\Local\Programs\Python\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py”, line 24, in swig_import_helper_mod = imp.load_module(‘_pywrap_tensorflow_internal’, fp, pathname, description)<br>File “C:\Users\Hui Zhang\AppData\Local\Programs\Python\Python35\lib\imp.py”, line 242, in load_module return load_dynamic(name, filename, file)<br>File “C:\Users\Hui Zhang\AppData\Local\Programs\Python\Python35\lib\imp.py”, line 342, in load_dynamic return _load(spec)<br>ImportError: DLL load failed: A dynamic link library (DLL) initialization routine failed.”</module></module></li>
-</ul>
-</li>
-<li><p>Solution</p>
-<ul>
-<li>It is because old CPU doesn’t support AVX, and you need to install using the source code of tensorflow. You need to follow [3] to install tensorflow from source file.</li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ul>
-<li>[1] <a href="https://gist.github.com/hi2p-perim/7855506#file-ssecheck-cpp" target="_blank" rel="noopener">Check SSE/AVX instruction support</a></li>
-<li>[2] <a href="https://github.com/tensorflow/tensorflow/issues/17761" target="_blank" rel="noopener">Issues of installing tensorflow with DLL error</a></li>
-<li>[3] <a href="https://www.tensorflow.org/install/source_windows" target="_blank" rel="noopener">Build from source on Windows</a></li>
-</ul>
 
         
         </div>
@@ -327,7 +291,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/2018/09/18/tensorflow-pycharm/" data-id="cjn9t5ety0006fguvah278rty" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/18/google-colab-cuda-cpp/" data-id="cjo80g65a00025guvl854hve1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -406,7 +370,7 @@ ga('send', 'pageview');
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    How to set up vs-code for C++ in Windows 10?
+                    Setup vs-code for C/C++ in Windows 10
                 
             </div>
         </a>
@@ -414,7 +378,7 @@ ga('send', 'pageview');
     
         <a href="/eric-blogs/2018/09/14/github-page-jekyll/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">How to set up Jekyll for github pages in Windows?</div>
+            <div class="article-nav-title">Set up Jekyll for GitHub page in Windows</div>
         </a>
     
 </nav>
@@ -436,7 +400,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/eric-blogs/tags/GitHub/" style="font-size: 13.33px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 13.33px;">PyCharm</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 13.33px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 16.67px;">WSL</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 13.33px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 13.33px;">vs-code</a>
+            <a href="/eric-blogs/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 13.33px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Jupyter/" style="font-size: 10px;">Jupyter</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 13.33px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 13.33px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 16.67px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 13.33px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 13.33px;">vs-code</a>
         </div>
     </div>
 
@@ -446,6 +410,25 @@ ga('send', 'pageview');
         <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Install Tensorflow (CPU) in PyCharm in Windows 10" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="title">Install Tensorflow (CPU) in PyCharm in Windows 10</a></p>
+                            <p class="item-date"><time datetime="2018-10-17T04:00:00.000Z" itemprop="datePublished">2018-10-17</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -472,7 +455,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Use of tensorflow model API in Google Colaboratory?" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Use tensorflow model API in Google Colaboratory" class="thumbnail-image"></span>
     
 </a>
 
@@ -480,7 +463,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="title">Use of tensorflow model API in Google Colaboratory?</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="title">Use tensorflow model API in Google Colaboratory</a></p>
                             <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
                         </div>
                     </li>
@@ -491,7 +474,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/11/vs-code-cuda/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="How to enable CUDA C/C++ support in vs-code in Windows 10?" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="Enable CUDA C/C++ support in vs-code in Windows 10" class="thumbnail-image"></span>
     
 </a>
 
@@ -499,7 +482,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/11/vs-code-cuda/" class="title">How to enable CUDA C/C++ support in vs-code in Windows 10?</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/11/vs-code-cuda/" class="title">Enable CUDA C/C++ support in vs-code in Windows 10</a></p>
                             <p class="item-date"><time datetime="2018-10-11T04:00:00.000Z" itemprop="datePublished">2018-10-11</time></p>
                         </div>
                     </li>
@@ -510,7 +493,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/10/vs-code-cpp/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="How to set up vs-code for C++ in Windows 10?" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="Setup vs-code for C/C++ in Windows 10" class="thumbnail-image"></span>
     
 </a>
 
@@ -518,27 +501,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/10/vs-code-cpp/" class="title">How to set up vs-code for C++ in Windows 10?</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/10/vs-code-cpp/" class="title">Setup vs-code for C/C++ in Windows 10</a></p>
                             <p class="item-date"><time datetime="2018-10-10T04:00:00.000Z" itemprop="datePublished">2018-10-10</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/09/18/tensorflow-pycharm/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="How to set up tensorflow in PyCharm in Windows?" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/09/18/tensorflow-pycharm/" class="title">How to set up tensorflow in PyCharm in Windows?</a></p>
-                            <p class="item-date"><time datetime="2018-09-18T04:00:00.000Z" itemprop="datePublished">2018-09-18</time></p>
                         </div>
                     </li>
                 

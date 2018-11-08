@@ -3,18 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Tag: Tensorflow | _PSN_ HOMEPAGE</title>
+    <title>Install Tensorflow (CPU) in PyCharm in Windows 10 | _PSN_ HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Program Solution Now is an entity I started in October 2018 to encourage beginners to embark on the journey on software development, providing immediate solutions to various software developing issues">
-<meta property="og:type" content="website">
-<meta property="og:title" content="_PSN_ HOMEPAGE">
-<meta property="og:url" content="http://ericzhng.github.io/eric-blogs/tags/Tensorflow/index.html">
+    <meta name="description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.    Ma">
+<meta name="keywords" content="Windows,PyCharm,Tensorflow,Anaconda,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Install Tensorflow (CPU) in PyCharm in Windows 10">
+<meta property="og:url" content="http://ericzhng.github.io/eric-blogs/2018/10/17/tensorflow-pycharm/index.html">
 <meta property="og:site_name" content="_PSN_ HOMEPAGE">
-<meta property="og:description" content="Program Solution Now is an entity I started in October 2018 to encourage beginners to embark on the journey on software development, providing immediate solutions to various software developing issues">
+<meta property="og:description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.    Ma">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://ericzhng.github.io/eric-blogs/images/tensorflow.jpg">
+<meta property="og:updated_time" content="2018-10-19T00:13:21.530Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="_PSN_ HOMEPAGE">
-<meta name="twitter:description" content="Program Solution Now is an entity I started in October 2018 to encourage beginners to embark on the journey on software development, providing immediate solutions to various software developing issues">
+<meta name="twitter:title" content="Install Tensorflow (CPU) in PyCharm in Windows 10">
+<meta name="twitter:description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.    Ma">
+<meta name="twitter:image" content="http://ericzhng.github.io/eric-blogs/images/tensorflow.jpg">
     
 
     
@@ -224,25 +228,29 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fas fa-tag"></i></span>
-        <h1 class="title">#Tensorflow</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-tensorflow-pycharm" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<img src="/eric-blogs/images_posts/tensorflow-pycharm.jpg" class="article-banner" />
+	
+
+
+
+        
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/eric-blogs/2018/10/17/tensorflow-pycharm/">Install Tensorflow (CPU) in PyCharm in Windows 10</a>
+        <h1 class="article-title" itemprop="name">
+            Install Tensorflow (CPU) in PyCharm in Windows 10
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
         <a href="/eric-blogs/2018/10/17/tensorflow-pycharm/">
@@ -251,59 +259,215 @@ ga('send', 'pageview');
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fas fa-folder"></i>
         <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fas fa-tag"></i>
         <a class="tag-link" href="/eric-blogs/tags/Anaconda/">Anaconda</a>, <a class="tag-link" href="/eric-blogs/tags/PyCharm/">PyCharm</a>, <a class="tag-link" href="/eric-blogs/tags/Python/">Python</a>, <a class="tag-link" href="/eric-blogs/tags/Tensorflow/">Tensorflow</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/eric-blogs/2018/10/13/google-colab-tensorflow/">Use tensorflow model API in Google Colaboratory</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>This blog shows how to install <strong>tensorflow</strong> for python in Windows 10, preferably in PyCharm. <strong>Tensorflow</strong> can be installed either with separate python installer or Anaconda open source distribution. </p>
+<!-- TOC -->
+<ul>
+<li><a href="#major-steps">Major steps</a></li>
+<li><a href="#common-errors">Common errors</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<!-- /TOC -->
+<a id="more"></a>
+<h2 id="Major-steps"><a href="#Major-steps" class="headerlink" title="Major steps"></a>Major steps</h2><blockquote>
+<ol>
+<li>Download PyCharm Community Edition from <a href="https://www.jetbrains.com/pycharm/download/#section=windows" target="_blank" rel="noopener">JetBrain official website</a> and install it in Windows 10.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Download and install Anaconda from <a href="https://www.anaconda.com/download/#windows" target="_blank" rel="noopener">here</a>. Choose whatever python version you use.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>Open PyCharm, click <em>Create New Project</em>, give the folder a name (ex. <code>tensorflow-test</code>) in <em>Location</em>, select <em>New environment using Virtualenv</em> and choose <em>Base interpreter</em> as python.exe in Anaconda3 folder. Click OK to continue.</li>
+</ol>
+</blockquote>
+<p><img src="pycharm/create-project-conda.png" alt="image missing" title="Create Project"></p>
+<blockquote>
+<ol start="4">
+<li>(<strong>alternative of 3</strong>) Open PyCharm, click <em>Create New Project</em>, give the folder a name in <em>Location</em>, select <em>Existing interpreter</em>. If none is shown in the <em>Interpreter</em>, click “…” and in <em>Add Python Interpreter</em> dialog, choose native python.exe. Click OK to go back and then create.</li>
+</ol>
+</blockquote>
+<p><img src="pycharm/create-project-native.png" alt="image missing" title="Create Project"></p>
+<p><img src="pycharm/add-exist-python-interpreter.png" alt="image missing" title="Add Python Interpreter"></p>
+<blockquote>
+<ol start="5">
+<li>Go to File -&gt; Settings, search for <em>Porject Interpreter</em>, ensure that corresponding python version is used as the interpreter. Then install the python packages you need to install by clicking “+” on top right, such as <code>numpy, matplotlib, pandas, python-opencv</code> etc.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>To install <code>tensorflow</code>, use pip. Click <em>Start</em> in Windows (bottom left of your screen), type <em>Anaconda Prompt</em> and open the command window. Type in <em>activate tensorflow-test</em> to activate your virtual environment in Anaconda. Then type <code>pip install tensorflow</code> to install tensorflow.</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="7">
+<li>(<strong>alternative of 6</strong>) Open Windows system command prompt (cmd), type following commands to verify that you are installing on correct python versions. Then type in <code>pip install tensorflow</code> to install newest tensorflow package. You can also install a previous version using <code>pip install tensorflow=1.10.0</code>, for example.</li>
+</ol>
+</blockquote>
+<pre><code>`python --version`
+`pip --version`
+</code></pre><blockquote>
+<ol start="8">
+<li>To test whether your installation works, create a python file named <code>test.py</code>. Copy the following python scripts in <code>test.py</code> and execute it in PyCharm. If it outputs the current tensorflow version, it means that <strong>tensorflow</strong> is successfully installed.</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line">print(tf.__version__)</span><br></pre></td></tr></table></figure>
+<p><img src="pycharm/create-new-python-file.png" alt="image missing" title="Create a new python file"></p>
+<h2 id="Common-errors"><a href="#Common-errors" class="headerlink" title="Common errors"></a>Common errors</h2><ul>
+<li><img src="pycharm/error.png" alt="image missing"> <strong>“ImportError: DLL load failed: A dynamic link library (DLL) initialization routine failed.”</strong><ul>
+<li><strong>Reason</strong>: Some old CPUs (typically for CPUs before 2011) do not support AVX type instruction set extension, so you need to check whether your machine support AVX/AVX2 before installing pre-complied tensorflow wheel file.</li>
+<li><strong>Solution</strong>: If you indeed have older CPUs, you can still make it work by installing tensorflow compiled compatible with other instruction set extensions, such as <code>SSE2</code>. Please download specific version of tensorflow from <a href="https://github.com/ericzhng/tensorflow-windows-wheel/tree/master/1.11.0/py36/CPU" target="_blank" rel="noopener">here</a>.</li>
+<li>Another <strong>option</strong> you can go is to build tensorflow from source. For details, please refer to <a href="#reference">3</a>.</li>
+<li>Here is a <strong>list of CPUs compatible</strong> with AVX instructions set extensions:<br><a href="https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><img src="pycharm/error.png" alt="image missing"> <strong>“tensorflow-*.whl is not supported wheel on this platform”</strong><ul>
+<li><strong>Reason</strong>: Currently tensorflow is only supported up to Python 36. While newest Anaconda comes with Python 37 package.</li>
+<li><strong>Solution</strong>: You can go to File -&gt; Settings, create a new virtual conda environment, and select Python 36. Then install tensorflow either from repository or downloaded file.</li>
+</ul>
+</li>
+</ul>
+<p><img src="pycharm/create-conda-envs.png" alt="image missing" title="Add Python Interpreter"></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><hr>
+<ul>
+<li><ol>
+<li><a href="https://gist.github.com/hi2p-perim/7855506#file-ssecheck-cpp" target="_blank" rel="noopener">Check SSE/AVX instruction support</a>.</li>
+</ol>
+</li>
+<li><ol start="2">
+<li><a href="https://github.com/tensorflow/tensorflow/issues/17761" target="_blank" rel="noopener">Issues of installing tensorflow with DLL error</a>.</li>
+</ol>
+</li>
+<li><ol start="3">
+<li><a href="https://www.tensorflow.org/install/source_windows" target="_blank" rel="noopener">Build from source on Windows</a>.</li>
+</ol>
+</li>
+</ul>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/eric-blogs/2018/10/13/google-colab-tensorflow/">
-            <time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/eric-blogs/tags/Google-Colab/">Google Colab</a>, <a class="tag-link" href="/eric-blogs/tags/PyCharm/">PyCharm</a>, <a class="tag-link" href="/eric-blogs/tags/Tensorflow/">Tensorflow</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
 </div>
+
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/17/tensorflow-pycharm/" data-id="cjo80g65q000a5guvazt9kjkn" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/eric-blogs/2018/10/13/github-page-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Set up hexo for GitHub page</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+
 </section>
             
                 

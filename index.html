@@ -8,7 +8,7 @@
     <meta name="description" content="Program Solution Now is an entity I started in October 2018 to encourage beginners to embark on the journey on software development, providing immediate solutions to various software developing issues">
 <meta property="og:type" content="website">
 <meta property="og:title" content="_PSN_ HOMEPAGE">
-<meta property="og:url" content="http://ericzhng.github.io/index.html">
+<meta property="og:url" content="http://ericzhng.github.io/eric-blogs/index.html">
 <meta property="og:site_name" content="_PSN_ HOMEPAGE">
 <meta property="og:description" content="Program Solution Now is an entity I started in October 2018 to encourage beginners to embark on the journey on software development, providing immediate solutions to various software developing issues">
 <meta property="og:locale" content="en">
@@ -172,11 +172,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                6
+                7
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                12
+                17
                 <span>tags</span>
             </div>
         </div>
@@ -225,13 +225,161 @@ ga('send', 'pageview');
 
             
             <section id="main">
+    <article id="post-tensorflow-pycharm" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" itemprop="url">
+            <img src="/eric-blogs/images_posts/tensorflow-pycharm.jpg" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/eric-blogs/2018/10/17/tensorflow-pycharm/">Install Tensorflow (CPU) in PyCharm in Windows 10</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/eric-blogs/2018/10/17/tensorflow-pycharm/">
+            <time datetime="2018-10-17T04:00:00.000Z" itemprop="datePublished">2018-10-17</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/eric-blogs/tags/Anaconda/">Anaconda</a>, <a class="tag-link" href="/eric-blogs/tags/PyCharm/">PyCharm</a>, <a class="tag-link" href="/eric-blogs/tags/Python/">Python</a>, <a class="tag-link" href="/eric-blogs/tags/Tensorflow/">Tensorflow</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>This blog shows how to install <strong>tensorflow</strong> for python in Windows 10, preferably in PyCharm. <strong>Tensorflow</strong> can be installed either with separate python installer or Anaconda open source distribution. </p>
+<!-- TOC -->
+<ul>
+<li><a href="#major-steps">Major steps</a></li>
+<li><a href="#common-errors">Common errors</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<!-- /TOC --></p>
+            <p class="article-more-link">
+                <a href="/eric-blogs/2018/10/17/tensorflow-pycharm/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/17/tensorflow-pycharm/" data-id="cjo80g65q000a5guvazt9kjkn" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-github-page-hexo" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             
 	
 		<a href="/eric-blogs/2018/10/13/github-page-hexo/" itemprop="url">
-            <img src="/eric-blogs/gallery/arabic-pyramid.jpg" class="article-banner" />
+            <img src="/eric-blogs/images_posts/github-hexo.png" class="article-banner" />
         </a>
 	
 
@@ -290,7 +438,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/2018/10/13/github-page-hexo/" data-id="cjn9t5eti0000fguvbe7hxj5j" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/13/github-page-hexo/" data-id="cjo80g65200005guv8nuk990w" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -372,7 +520,7 @@ ga('send', 'pageview');
             
 	
 		<a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" itemprop="url">
-            <img src="/eric-blogs/gallery/china-great-wall.jpg" class="article-banner" />
+            <img src="/eric-blogs/images_posts/colab-tensorflow.jpg" class="article-banner" />
         </a>
 	
 
@@ -384,7 +532,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/eric-blogs/2018/10/13/google-colab-tensorflow/">Use of tensorflow model API in Google Colaboratory?</a>
+            <a class="article-title" href="/eric-blogs/2018/10/13/google-colab-tensorflow/">Use tensorflow model API in Google Colaboratory</a>
         </h1>
     
 
@@ -431,7 +579,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/2018/10/13/google-colab-tensorflow/" data-id="cjn9t5eu10008fguvpg5hn9bo" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/13/google-colab-tensorflow/" data-id="cjo80g65i00065guv13hkm0i6" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -513,7 +661,7 @@ ga('send', 'pageview');
             
 	
 		<a href="/eric-blogs/2018/10/11/vs-code-cuda/" itemprop="url">
-            <img src="/eric-blogs/gallery/music1.jpg" class="article-banner" />
+            <img src="/eric-blogs/images_posts/vscode-cuda.png" class="article-banner" />
         </a>
 	
 
@@ -525,7 +673,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/eric-blogs/2018/10/11/vs-code-cuda/">How to enable CUDA C/C++ support in vs-code in Windows 10?</a>
+            <a class="article-title" href="/eric-blogs/2018/10/11/vs-code-cuda/">Enable CUDA C/C++ support in vs-code in Windows 10</a>
         </h1>
     
 
@@ -572,7 +720,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/2018/10/11/vs-code-cuda/" data-id="cjn9t5eu30009fguvc876v96z" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/11/vs-code-cuda/" data-id="cjo80g65w000e5guvpbbighxj" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -654,7 +802,7 @@ ga('send', 'pageview');
             
 	
 		<a href="/eric-blogs/2018/10/10/vs-code-cpp/" itemprop="url">
-            <img src="/eric-blogs/gallery/little-girl.jpg" class="article-banner" />
+            <img src="/eric-blogs/images_posts/vscode_cpp.png" class="article-banner" />
         </a>
 	
 
@@ -666,7 +814,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/eric-blogs/2018/10/10/vs-code-cpp/">How to set up vs-code for C++ in Windows 10?</a>
+            <a class="article-title" href="/eric-blogs/2018/10/10/vs-code-cpp/">Setup vs-code for C/C++ in Windows 10</a>
         </h1>
     
 
@@ -700,7 +848,22 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><p>In this blog, I want to show users how to set up vs-code for C/C++ code in Windows 10 using Linux subsystem, or Windows Subsystem for Linux (WSL).</p></p>
+            <p><p>Visual Studio Code (vs-code) is a very light and convenient IDE for programming using C/C++, Python and so many other languages. Thus in this blog, I want to show users how to setup <strong>vs-code</strong> for C/C++ programming using Linux subsystem in Windows 10. The subsystem is usually referred to as Windows Subsystem for Linux (WSL). </p>
+<!-- TOC -->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#major-steps">Major Steps</a><ul>
+<li><a href="#1-enable-linux-bash-shell-in-windows-10">1. Enable Linux Bash shell in Windows 10</a></li>
+<li><a href="#2-install-vs-code-in-windows-10">2. Install vs-code in Windows 10</a></li>
+<li><a href="#3-debug-and-run-cc-code-in-vs-code">3. Debug and run C/C++ code in vs-code</a></li>
+<li><a href="#tasks-configuration-refer-to-file-tasksjson">Tasks configuration: refer to file <strong>tasks.json</strong>.</a></li>
+<li><a href="#debug-configuration-refer-to-file-launchjson">Debug configuration: refer to file <strong>launch.json</strong>.</a></li>
+</ul>
+</li>
+<li><a href="#common-errors">Common errors</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<!-- /TOC --></p>
             <p class="article-more-link">
                 <a href="/eric-blogs/2018/10/10/vs-code-cpp/#more">Read More</a>
             </p>
@@ -713,7 +876,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/2018/10/10/vs-code-cpp/" data-id="cjn9t5eu8000cfguvhovtvyrl" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/10/vs-code-cpp/" data-id="cjo80g660000f5guvlxnmt5yh" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -789,13 +952,13 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-tensorflow-pycharm" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-google-colab-cuda-cpp" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             
 	
-		<a href="/eric-blogs/2018/09/18/tensorflow-pycharm/" itemprop="url">
-            <img src="/eric-blogs/gallery/guitarist.jpg" class="article-banner" />
+		<a href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/" itemprop="url">
+            <img src="/eric-blogs/images_posts/google-colab-cuda-cpp.png" class="article-banner" />
         </a>
 	
 
@@ -807,7 +970,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/eric-blogs/2018/09/18/tensorflow-pycharm/">How to set up tensorflow in PyCharm in Windows?</a>
+            <a class="article-title" href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/">Run CUDA C/C++ in Jupyter notebook in Google Colaboratory</a>
         </h1>
     
 
@@ -816,7 +979,7 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/eric-blogs/2018/09/18/tensorflow-pycharm/">
+        <a href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/">
             <time datetime="2018-09-18T04:00:00.000Z" itemprop="datePublished">2018-09-18</time>
         </a>
     </div>
@@ -825,13 +988,13 @@ ga('send', 'pageview');
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a>
+        <a class="article-category-link" href="/eric-blogs/categories/Techniques/">Techniques</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Techniques/Cpp/">Cpp</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/eric-blogs/tags/PyCharm/">PyCharm</a>, <a class="tag-link" href="/eric-blogs/tags/Tensorflow/">Tensorflow</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
+        <a class="tag-link" href="/eric-blogs/tags/CUDA/">CUDA</a>, <a class="tag-link" href="/eric-blogs/tags/Jupyter/">Jupyter</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
     </div>
 
                     </div>
@@ -841,9 +1004,9 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><p>In this blog, I would like to show you how to set up tensorflow in PyCharm in Window.</p></p>
+            <p><p>I learnt to run cuda C/C++ program in google Colab using the Jupyter notebook from <a href="https://medium.com/@iphoenix179/running-cuda-c-c-in-jupyter-or-how-to-run-nvcc-in-google-colab-663d33f53772" target="_blank" rel="noopener">here</a>. I will show some details of the implementations at a later time.</p></p>
             <p class="article-more-link">
-                <a href="/eric-blogs/2018/09/18/tensorflow-pycharm/#more">Read More</a>
+                <a href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/#more">Read More</a>
             </p>
         
         </div>
@@ -854,7 +1017,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/2018/09/18/tensorflow-pycharm/" data-id="cjn9t5ety0006fguvah278rty" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/18/google-colab-cuda-cpp/" data-id="cjo80g65a00025guvl854hve1" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -930,146 +1093,9 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-github-page-jekyll" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            
-	
-		<a href="/eric-blogs/2018/09/14/github-page-jekyll/" itemprop="url">
-            <img src="/eric-blogs/gallery/music2.jpg" class="article-banner" />
-        </a>
-	
-
-
-
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/eric-blogs/2018/09/14/github-page-jekyll/">How to set up Jekyll for github pages in Windows?</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fas fa-calendar-alt"></i>
-        <a href="/eric-blogs/2018/09/14/github-page-jekyll/">
-            <time datetime="2018-09-14T04:00:00.000Z" itemprop="datePublished">2018-09-14</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Website/">Website</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/eric-blogs/tags/GitHub/">GitHub</a>, <a class="tag-link" href="/eric-blogs/tags/Jekyll/">Jekyll</a>, <a class="tag-link" href="/eric-blogs/tags/WSL/">WSL</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p>In this blog, I want to talk about how to set up Jekyll in Windows environment, mainly Windows 10, since you can enable the Linux bash.</p></p>
-            <p class="article-more-link">
-                <a href="/eric-blogs/2018/09/14/github-page-jekyll/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://ericzhng.github.io/2018/09/14/github-page-jekyll/" data-id="cjn9t5etq0002fguvc22eykkb" class="article-share-link"><i class="fas fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
+    <nav id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/eric-blogs/page/2/">2</a><a class="extend next" rel="next" href="/eric-blogs/page/2/">Next &raquo;</a>
+    </nav>
 </section>
             
                 
@@ -1079,7 +1105,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/eric-blogs/tags/GitHub/" style="font-size: 13.33px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 13.33px;">PyCharm</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 13.33px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 16.67px;">WSL</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 13.33px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 13.33px;">vs-code</a>
+            <a href="/eric-blogs/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 13.33px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Jupyter/" style="font-size: 10px;">Jupyter</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 13.33px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 13.33px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 16.67px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 13.33px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 13.33px;">vs-code</a>
         </div>
     </div>
 
@@ -1089,6 +1115,25 @@ ga('send', 'pageview');
         <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Install Tensorflow (CPU) in PyCharm in Windows 10" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="title">Install Tensorflow (CPU) in PyCharm in Windows 10</a></p>
+                            <p class="item-date"><time datetime="2018-10-17T04:00:00.000Z" itemprop="datePublished">2018-10-17</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -1115,7 +1160,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Use of tensorflow model API in Google Colaboratory?" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Use tensorflow model API in Google Colaboratory" class="thumbnail-image"></span>
     
 </a>
 
@@ -1123,7 +1168,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="title">Use of tensorflow model API in Google Colaboratory?</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="title">Use tensorflow model API in Google Colaboratory</a></p>
                             <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
                         </div>
                     </li>
@@ -1134,7 +1179,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/11/vs-code-cuda/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="How to enable CUDA C/C++ support in vs-code in Windows 10?" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="Enable CUDA C/C++ support in vs-code in Windows 10" class="thumbnail-image"></span>
     
 </a>
 
@@ -1142,7 +1187,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/11/vs-code-cuda/" class="title">How to enable CUDA C/C++ support in vs-code in Windows 10?</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/11/vs-code-cuda/" class="title">Enable CUDA C/C++ support in vs-code in Windows 10</a></p>
                             <p class="item-date"><time datetime="2018-10-11T04:00:00.000Z" itemprop="datePublished">2018-10-11</time></p>
                         </div>
                     </li>
@@ -1153,7 +1198,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/10/vs-code-cpp/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="How to set up vs-code for C++ in Windows 10?" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="Setup vs-code for C/C++ in Windows 10" class="thumbnail-image"></span>
     
 </a>
 
@@ -1161,27 +1206,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/10/vs-code-cpp/" class="title">How to set up vs-code for C++ in Windows 10?</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/10/vs-code-cpp/" class="title">Setup vs-code for C/C++ in Windows 10</a></p>
                             <p class="item-date"><time datetime="2018-10-10T04:00:00.000Z" itemprop="datePublished">2018-10-10</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/09/18/tensorflow-pycharm/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="How to set up tensorflow in PyCharm in Windows?" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/09/18/tensorflow-pycharm/" class="title">How to set up tensorflow in PyCharm in Windows?</a></p>
-                            <p class="item-date"><time datetime="2018-09-18T04:00:00.000Z" itemprop="datePublished">2018-09-18</time></p>
                         </div>
                     </li>
                 
