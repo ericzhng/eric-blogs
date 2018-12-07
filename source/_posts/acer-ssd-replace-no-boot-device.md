@@ -1,7 +1,6 @@
 ---
-
-title: 'Laptop install SSD show error "No Bootable Device"'
-date: 2018-12-06
+title: Laptop install SSD show error "No Bootable Device"
+date: 2018-12-06 23:04:15
 banner: /eric-blogs/images_posts/samsung-ssd.jpg
 thumbnail: /eric-blogs/images_posts/acer-laptop-ssd-no-bootable-device.jpg
 categories:
@@ -10,7 +9,6 @@ categories:
 tags:
   - Operating system
   - Boot
-
 ---
 
 Sometimes, when you replace a storage drive on a laptop, you might expect such an error showing "No Bootable Device". In this case, it is just that you are in the wrong Boot mode. 

@@ -1,7 +1,6 @@
 ---
-
-title: 'Switch terminals in vs-code'
-date: 2018-11-07
+title: Switch terminals in vs-code
+date: 2018-12-06 23:07:07
 banner: /eric-blogs/images_posts/vscode_cpp.png
 thumbnail: /eric-blogs/images/vs-code.png
 categories:
@@ -12,7 +11,6 @@ tags:
   - bash
   - vs-code
   - WSL
-
 ---
 
 You can also select your default terminal by pressing F1 in VS Code and typing/selecting Terminal: Select Default Shell.
