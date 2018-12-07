@@ -172,11 +172,11 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                7
+                9
                 <span>posts</span>
             </div>
             <div class="article-info-block">
-                17
+                19
                 <span>tags</span>
             </div>
         </div>
@@ -225,6 +225,303 @@ ga('send', 'pageview');
 
             
             <section id="main">
+    <article id="post-vs-code-cpp" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/eric-blogs/2018/10/10/vs-code-cpp/" itemprop="url">
+            <img src="/eric-blogs/images_posts/vscode_cpp.png" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/eric-blogs/2018/10/10/vs-code-cpp/">Setup vs-code for C/C++ in Windows 10</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/eric-blogs/2018/10/10/vs-code-cpp/">
+            <time datetime="2018-10-10T04:00:00.000Z" itemprop="datePublished">2018-10-10</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/eric-blogs/tags/WSL/">WSL</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>, <a class="tag-link" href="/eric-blogs/tags/bash/">bash</a>, <a class="tag-link" href="/eric-blogs/tags/vs-code/">vs-code</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>Visual Studio Code (vs-code) is a very light and convenient IDE for programming using C/C++, Python and so many other languages. Thus in this blog, I want to show users how to setup <strong>vs-code</strong> for C/C++ programming using Linux subsystem in Windows 10. The subsystem is usually referred to as Windows Subsystem for Linux (WSL). </p>
+<!-- TOC -->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#major-steps">Major Steps</a><ul>
+<li><a href="#1-enable-linux-bash-shell-in-windows-10">1. Enable Linux Bash shell in Windows 10</a></li>
+<li><a href="#2-install-vs-code-in-windows-10">2. Install vs-code in Windows 10</a></li>
+<li><a href="#3-debug-and-run-cc-code-in-vs-code">3. Debug and run C/C++ code in vs-code</a></li>
+<li><a href="#tasks-configuration-refer-to-file-tasksjson">Tasks configuration: refer to file <strong>tasks.json</strong>.</a></li>
+<li><a href="#debug-configuration-refer-to-file-launchjson">Debug configuration: refer to file <strong>launch.json</strong>.</a></li>
+</ul>
+</li>
+<li><a href="#common-errors">Common errors</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+<!-- /TOC --></p>
+            <p class="article-more-link">
+                <a href="/eric-blogs/2018/10/10/vs-code-cpp/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/10/vs-code-cpp/" data-id="cjpdifslz000f4kuvs44wxgqb" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-google-colab-cuda-cpp" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/" itemprop="url">
+            <img src="/eric-blogs/images_posts/google-colab-cuda-cpp.png" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/">Run CUDA C/C++ in Jupyter notebook in Google Colaboratory</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/">
+            <time datetime="2018-09-18T04:00:00.000Z" itemprop="datePublished">2018-09-18</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/eric-blogs/categories/Techniques/">Techniques</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Techniques/Cpp/">Cpp</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/eric-blogs/tags/CUDA/">CUDA</a>, <a class="tag-link" href="/eric-blogs/tags/Jupyter/">Jupyter</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>I learnt to run cuda C/C++ program in google Colab using the Jupyter notebook from <a href="https://medium.com/@iphoenix179/running-cuda-c-c-in-jupyter-or-how-to-run-nvcc-in-google-colab-663d33f53772" target="_blank" rel="noopener">here</a>. I will show some details of the implementations at a later time.</p></p>
+            <p class="article-more-link">
+                <a href="/eric-blogs/2018/09/18/google-colab-cuda-cpp/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/18/google-colab-cuda-cpp/" data-id="cjpdifsls000b4kuvfo17we9y" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-github-page-jekyll" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -290,7 +587,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/14/github-page-jekyll/" data-id="cjpdi1yfa0002nouvq4zftwj2" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/14/github-page-jekyll/" data-id="cjpdifslk00064kuvhyhagd6q" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -378,7 +675,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/eric-blogs/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 13.33px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Jupyter/" style="font-size: 10px;">Jupyter</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 13.33px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 13.33px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 16.67px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 13.33px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 13.33px;">vs-code</a>
+            <a href="/eric-blogs/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/eric-blogs/tags/Boot/" style="font-size: 10px;">Boot</a> <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 12.5px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Jupyter/" style="font-size: 10px;">Jupyter</a> <a href="/eric-blogs/tags/Operating-system/" style="font-size: 10px;">Operating system</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 12.5px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 12.5px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 17.5px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 15px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 15px;">vs-code</a>
         </div>
     </div>
 
@@ -388,6 +685,44 @@ ga('send', 'pageview');
         <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="Switch terminals in vs-code" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" class="title">Switch terminals in vs-code</a></p>
+                            <p class="item-date"><time datetime="2018-12-07T04:07:07.000Z" itemprop="datePublished">2018-12-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/eric-blogs/images_posts/acer-laptop-ssd-no-bootable-device.jpg)" alt="Laptop install SSD show error &#34;No Bootable Device&#34;" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Hardware/">Hardware</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Hardware/SSD/">SSD</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" class="title">Laptop install SSD show error &#34;No Bootable Device&#34;</a></p>
+                            <p class="item-date"><time datetime="2018-12-07T04:04:15.000Z" itemprop="datePublished">2018-12-06</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -443,44 +778,6 @@ ga('send', 'pageview');
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
                             <p class="item-title"><a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="title">Use tensorflow model API in Google Colaboratory</a></p>
                             <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/10/11/vs-code-cuda/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="Enable CUDA C/C++ support in vs-code in Windows 10" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/11/vs-code-cuda/" class="title">Enable CUDA C/C++ support in vs-code in Windows 10</a></p>
-                            <p class="item-date"><time datetime="2018-10-11T04:00:00.000Z" itemprop="datePublished">2018-10-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/10/10/vs-code-cpp/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images/vs-code.png)" alt="Setup vs-code for C/C++ in Windows 10" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/10/vs-code-cpp/" class="title">Setup vs-code for C/C++ in Windows 10</a></p>
-                            <p class="item-date"><time datetime="2018-10-10T04:00:00.000Z" itemprop="datePublished">2018-10-10</time></p>
                         </div>
                     </li>
                 
