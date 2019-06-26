@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang=en>
-<head>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
     <title>_PSN_ HOMEPAGE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Program Solution Now is an entity I started in October 2018 to encourage beginners to embark on the journey on software development, providing immediate solutions to various software developing issues">
 <meta property="og:type" content="website">
 <meta property="og:title" content="_PSN_ HOMEPAGE">
@@ -18,11 +18,11 @@
     
 
     
-        <link rel="alternate" href="/" title="_PSN_ HOMEPAGE" type="application/atom+xml" />
+        <link rel="alternate" href="/" title="_PSN_ HOMEPAGE" type="application/atom+xml">
     
 
     
-        <link rel="icon" href="/eric-blogs/css/images/background.jpg" />
+        <link rel="icon" href="/eric-blogs/css/images/background.jpg">
     
 
     <link rel="stylesheet" href="/eric-blogs/libs/font-awesome5/css/fontawesome.min.css">
@@ -58,7 +58,7 @@ ga('send', 'pageview');
 
 
 </head>
-
+</html>
 <body>
     <div id="container">
         <header id="header">
@@ -172,7 +172,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                9
+                10
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -225,6 +225,147 @@ ga('send', 'pageview');
 
             
             <section id="main">
+    <article id="post-vs-code-cuda" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            
+	
+		<a href="/eric-blogs/2018/10/11/vs-code-cuda/" itemprop="url">
+            <img src="/eric-blogs/images_posts/vscode-cuda.png" class="article-banner" />
+        </a>
+	
+
+
+
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/eric-blogs/2018/10/11/vs-code-cuda/">Enable CUDA C/C++ support in vs-code in Windows 10</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/eric-blogs/2018/10/11/vs-code-cuda/">
+            <time datetime="2018-10-11T04:00:00.000Z" itemprop="datePublished">2018-10-11</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/eric-blogs/tags/WSL/">WSL</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>, <a class="tag-link" href="/eric-blogs/tags/bash/">bash</a>, <a class="tag-link" href="/eric-blogs/tags/cpp/">cpp</a>, <a class="tag-link" href="/eric-blogs/tags/cuda/">cuda</a>, <a class="tag-link" href="/eric-blogs/tags/vs-code/">vs-code</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>In this blog, I want to show users how to set up vs-code for CUDA C/C++ code in Windows 10.</p></p>
+            <p class="article-more-link">
+                <a href="/eric-blogs/2018/10/11/vs-code-cuda/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/11/vs-code-cuda/" data-id="cjxds480q000o0kw076ccj5m0" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-vs-code-cpp" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -279,6 +420,7 @@ ga('send', 'pageview');
         
             <p><p>Visual Studio Code (vs-code) is a very light and convenient IDE for programming using C/C++, Python and so many other languages. Thus in this blog, I want to show users how to setup <strong>vs-code</strong> for C/C++ programming using Linux subsystem in Windows 10. The subsystem is usually referred to as Windows Subsystem for Linux (WSL). </p>
 <!-- TOC -->
+
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#major-steps">Major Steps</a><ul>
@@ -305,7 +447,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/10/vs-code-cpp/" data-id="cjpdifslz000f4kuvs44wxgqb" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/10/vs-code-cpp/" data-id="cjxds483b002v0kw0ztczte35" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -446,7 +588,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/18/google-colab-cuda-cpp/" data-id="cjpdifsls000b4kuvfo17we9y" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/18/google-colab-cuda-cpp/" data-id="cjxds47zv000c0kw0xg15db3b" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -587,7 +729,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/14/github-page-jekyll/" data-id="cjpdifslk00064kuvhyhagd6q" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/14/github-page-jekyll/" data-id="cjxds4808000i0kw0ze9cg71e" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -689,6 +831,25 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="title">Difference between Big and Little Endian Byte Order</a></p>
+                            <p class="item-date"><time datetime="2018-12-08T23:11:53.000Z" itemprop="datePublished">2018-12-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" class="thumbnail">
     
     
@@ -762,25 +923,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Use tensorflow model API in Google Colaboratory" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="title">Use tensorflow model API in Google Colaboratory</a></p>
-                            <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -822,7 +964,7 @@ ga('send', 'pageview');
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2018 Program Solution Now (_PSN_)<br>
+            &copy; 2019 Program Solution Now (_PSN_)<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang=en>
-<head>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
     <title>Enable CUDA C/C++ support in vs-code in Windows 10 | _PSN_ HOMEPAGE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="In this blog, I want to show users how to set up vs-code for CUDA C/C++ code in Windows 10.">
 <meta name="keywords" content="Windows,WSL,bash,vs-code,cuda,cpp">
 <meta property="og:type" content="article">
@@ -22,11 +22,11 @@
     
 
     
-        <link rel="alternate" href="/" title="_PSN_ HOMEPAGE" type="application/atom+xml" />
+        <link rel="alternate" href="/" title="_PSN_ HOMEPAGE" type="application/atom+xml">
     
 
     
-        <link rel="icon" href="/eric-blogs/css/images/background.jpg" />
+        <link rel="icon" href="/eric-blogs/css/images/background.jpg">
     
 
     <link rel="stylesheet" href="/eric-blogs/libs/font-awesome5/css/fontawesome.min.css">
@@ -62,7 +62,7 @@ ga('send', 'pageview');
 
 
 </head>
-
+</html>
 <body>
     <div id="container">
         <header id="header">
@@ -176,7 +176,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                9
+                10
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -281,6 +281,7 @@ ga('send', 'pageview');
             
             <p>In this blog, I want to show users how to set up vs-code for CUDA C/C++ code in Windows 10.</p>
 <a id="more"></a>
+
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I’ve been working on cuda programming in Visual Studio, which can be set up easily. However, since I play with vs-code, I would like to use vs-code for cuda as well. So In this blog, I want to show users how to set up vs-code for cuda in Windows.</p>
 <p>There are some major steps you need to take, in order to run/debug cuda code using vs-code.</p>
 <ol start="0">
@@ -289,17 +290,25 @@ ga('send', 'pageview');
 <li>Download the <a href="https://github.com/ericzhng/test-cuda-vs-code" target="_blank" rel="noopener">sample code</a> from my GitHub repository. </li>
 <li>Press Ctrl+Shift+B in vs-code, choose build to compile the code. Choose run to run the executable.</li>
 <li>Currently it is not able to enable cuda-debugger for cuda in vs-code in Windows. If you were to do everything in bash, then there might be a possibility to configure cuda-debugger.</li>
-<li><p>But it is OK to use Windows C/C++ debugger, to only debug CPU code.</p>
-<p><strong>c_cpp_properties.json</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;Linux&quot;,</span><br><span class="line">            &quot;includePath&quot;: [</span><br><span class="line">                &quot;$&#123;workspaceRoot&#125;&quot;,</span><br><span class="line">                &quot;/usr/include&quot;,</span><br><span class="line">                &quot;/usr/local/include&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;defines&quot;: [],</span><br><span class="line">            &quot;browse&quot;: &#123;</span><br><span class="line">                &quot;path&quot;: [</span><br><span class="line">                    &quot;/usr/include&quot;,</span><br><span class="line">                    &quot;/usr/local/include&quot;,</span><br><span class="line">                    &quot;$&#123;workspaceRoot&#125;&quot;</span><br><span class="line">                ],</span><br><span class="line">                &quot;limitSymbolsToIncludedHeaders&quot;: true,</span><br><span class="line">                &quot;databaseFilename&quot;: &quot;&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;intelliSenseMode&quot;: &quot;clang-x64&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;Win32&quot;,</span><br><span class="line">            &quot;includePath&quot;: [</span><br><span class="line">                &quot;$&#123;workspaceRoot&#125;&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.10.25017/include/*&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/um&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/ucrt&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/shared&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/winrt&quot;,</span><br><span class="line">                &quot;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.1/include&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;defines&quot;: [</span><br><span class="line">                &quot;_DEBUG&quot;,</span><br><span class="line">                &quot;UNICODE&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;browse&quot;: &#123;</span><br><span class="line">                &quot;path&quot;: [</span><br><span class="line">                    &quot;C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.10.25017/include/*&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/um&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/ucrt&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/shared&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/winrt&quot;,</span><br><span class="line">                    &quot;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.1/include&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin&quot;,</span><br><span class="line">                    &quot;$&#123;workspaceRoot&#125;&quot;</span><br><span class="line">                ],</span><br><span class="line">                &quot;limitSymbolsToIncludedHeaders&quot;: true,</span><br><span class="line">                &quot;databaseFilename&quot;: &quot;&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;intelliSenseMode&quot;: &quot;msvc-x64&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;version&quot;: 4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>But it is OK to use Windows C/C++ debugger, to only debug CPU code.</li>
 </ol>
+<p> <strong>c_cpp_properties.json</strong></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;Linux&quot;,</span><br><span class="line">            &quot;includePath&quot;: [</span><br><span class="line">                &quot;$&#123;workspaceRoot&#125;&quot;,</span><br><span class="line">                &quot;/usr/include&quot;,</span><br><span class="line">                &quot;/usr/local/include&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;defines&quot;: [],</span><br><span class="line">            &quot;browse&quot;: &#123;</span><br><span class="line">                &quot;path&quot;: [</span><br><span class="line">                    &quot;/usr/include&quot;,</span><br><span class="line">                    &quot;/usr/local/include&quot;,</span><br><span class="line">                    &quot;$&#123;workspaceRoot&#125;&quot;</span><br><span class="line">                ],</span><br><span class="line">                &quot;limitSymbolsToIncludedHeaders&quot;: true,</span><br><span class="line">                &quot;databaseFilename&quot;: &quot;&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;intelliSenseMode&quot;: &quot;clang-x64&quot;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;Win32&quot;,</span><br><span class="line">            &quot;includePath&quot;: [</span><br><span class="line">                &quot;$&#123;workspaceRoot&#125;&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.10.25017/include/*&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/um&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/ucrt&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/shared&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/winrt&quot;,</span><br><span class="line">                &quot;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.1/include&quot;,</span><br><span class="line">                &quot;C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;defines&quot;: [</span><br><span class="line">                &quot;_DEBUG&quot;,</span><br><span class="line">                &quot;UNICODE&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;browse&quot;: &#123;</span><br><span class="line">                &quot;path&quot;: [</span><br><span class="line">                    &quot;C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.10.25017/include/*&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/um&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/ucrt&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/shared&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Windows Kits/10/Include/10.0.15063.0/winrt&quot;,</span><br><span class="line">                    &quot;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v9.1/include&quot;,</span><br><span class="line">                    &quot;C:/Program Files (x86)/Microsoft Visual Studio 12.0/VC/bin&quot;,</span><br><span class="line">                    &quot;$&#123;workspaceRoot&#125;&quot;</span><br><span class="line">                ],</span><br><span class="line">                &quot;limitSymbolsToIncludedHeaders&quot;: true,</span><br><span class="line">                &quot;databaseFilename&quot;: &quot;&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;intelliSenseMode&quot;: &quot;msvc-x64&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;version&quot;: 4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 <p> <strong>tasks.json</strong></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // See https://go.microsoft.com/fwlink/?LinkId=733558</span><br><span class="line">    // for the documentation about the tasks.json format</span><br><span class="line">    &quot;version&quot;: &quot;2.0.0&quot;,</span><br><span class="line">    &quot;echoCommand&quot;: true,</span><br><span class="line">    &quot;tasks&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;label&quot;: &quot;build&quot;,</span><br><span class="line">            &quot;command&quot;: &quot;nvcc&quot;,</span><br><span class="line">            &quot;args&quot;: [&quot;-g&quot;, &quot;-o&quot;, &quot;maintest.exe&quot;, &quot;src/hellocuda.cu&quot;],</span><br><span class="line">            &quot;group&quot;: &#123;</span><br><span class="line">                &quot;kind&quot;: &quot;build&quot;,</span><br><span class="line">                &quot;isDefault&quot;: true</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;problemMatcher&quot;: []</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;label&quot;: &quot;run&quot;,</span><br><span class="line">            &quot;command&quot;: &quot;./maintest.exe&quot;,</span><br><span class="line">            &quot;group&quot;: &#123;</span><br><span class="line">                &quot;kind&quot;: &quot;build&quot;,</span><br><span class="line">                &quot;isDefault&quot;: true</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;problemMatcher&quot;: []</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 <p> <strong>launch.json</strong></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;(Windows) Launch&quot;,</span><br><span class="line">            &quot;type&quot;: &quot;cppvsdbg&quot;,</span><br><span class="line">            &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">            &quot;program&quot;: &quot;$&#123;workspaceFolder&#125;/maintest.exe&quot;,</span><br><span class="line">            &quot;args&quot;: [],</span><br><span class="line">            &quot;stopAtEntry&quot;: false,</span><br><span class="line">            &quot;cwd&quot;: &quot;$&#123;workspaceFolder&#125;&quot;,</span><br><span class="line">            &quot;environment&quot;: [],</span><br><span class="line">            &quot;externalConsole&quot;: true</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ul>
-<li>[1] <a href=""></a>.</li>
+<li>[1] <a href></a>.</li>
 </ul>
 
         
@@ -311,7 +320,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/11/vs-code-cuda/" data-id="cjpdifsm1000h4kuvrf6gzvcn" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/11/vs-code-cuda/" data-id="cjxds480q000o0kw076ccj5m0" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -434,6 +443,25 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="title">Difference between Big and Little Endian Byte Order</a></p>
+                            <p class="item-date"><time datetime="2018-12-08T23:11:53.000Z" itemprop="datePublished">2018-12-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" class="thumbnail">
     
     
@@ -507,25 +535,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Use tensorflow model API in Google Colaboratory" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="title">Use tensorflow model API in Google Colaboratory</a></p>
-                            <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -567,7 +576,7 @@ ga('send', 'pageview');
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2018 Program Solution Now (_PSN_)<br>
+            &copy; 2019 Program Solution Now (_PSN_)<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang=en>
-<head>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
     <title>Setup vs-code for C/C++ in Windows 10 | _PSN_ HOMEPAGE</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Visual Studio Code (vs-code) is a very light and convenient IDE for programming using C/C++, Python and so many other languages. Thus in this blog, I want to show users how to setup vs-code for C/C++">
 <meta name="keywords" content="Windows,WSL,bash,vs-code">
 <meta property="og:type" content="article">
@@ -22,11 +22,11 @@
     
 
     
-        <link rel="alternate" href="/" title="_PSN_ HOMEPAGE" type="application/atom+xml" />
+        <link rel="alternate" href="/" title="_PSN_ HOMEPAGE" type="application/atom+xml">
     
 
     
-        <link rel="icon" href="/eric-blogs/css/images/background.jpg" />
+        <link rel="icon" href="/eric-blogs/css/images/background.jpg">
     
 
     <link rel="stylesheet" href="/eric-blogs/libs/font-awesome5/css/fontawesome.min.css">
@@ -62,7 +62,7 @@ ga('send', 'pageview');
 
 
 </head>
-
+</html>
 <body>
     <div id="container">
         <header id="header">
@@ -176,7 +176,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                9
+                10
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -281,6 +281,7 @@ ga('send', 'pageview');
             
             <p>Visual Studio Code (vs-code) is a very light and convenient IDE for programming using C/C++, Python and so many other languages. Thus in this blog, I want to show users how to setup <strong>vs-code</strong> for C/C++ programming using Linux subsystem in Windows 10. The subsystem is usually referred to as Windows Subsystem for Linux (WSL). </p>
 <!-- TOC -->
+
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#major-steps">Major Steps</a><ul>
@@ -295,7 +296,9 @@ ga('send', 'pageview');
 <li><a href="#reference">Reference</a></li>
 </ul>
 <!-- /TOC -->
+
 <a id="more"></a>
+
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I’ve started using vs-code long time ago, first in Ubuntu, then in Windows. But I’ve never actually debugged C/C++ code in Windows using vs-code, mainly because there isn’t a C/C++ compiler free of charge provided in Windows, and usually you have to configure a virtual machine to run Linux to debug/run C/C++ program in Windows.</p>
 <h2 id="Major-Steps"><a href="#Major-Steps" class="headerlink" title="Major Steps"></a>Major Steps</h2><p>There are some major steps you need to take in order to run/debug C/C++ code using vs-code in Windows 10. Please follow steps provided below.</p>
 <h3 id="1-Enable-Linux-Bash-shell-in-Windows-10"><a href="#1-Enable-Linux-Bash-shell-in-Windows-10" class="headerlink" title="1. Enable Linux Bash shell in Windows 10"></a>1. Enable Linux Bash shell in Windows 10</h3><blockquote>
@@ -353,6 +356,7 @@ ga('send', 'pageview');
 </ol>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	char strName[] = &quot;Eric&quot;;</span><br><span class="line">	std::cout&lt;&lt; &quot;Hello&quot; &lt;&lt; strName &lt;&lt; std::endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <ol start="2">
 <li>Next step, setting up configuration files for vs-code.</li>
@@ -374,8 +378,7 @@ ga('send', 'pageview');
 <th>Shortcuts</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Format document</td>
 <td><strong>Shift+Alt+F</strong> or <strong>Ctrl+K/Ctrl+F</strong></td>
 </tr>
@@ -391,13 +394,16 @@ ga('send', 'pageview');
 <td>Build the project</td>
 <td><strong>Ctrl+Shift+B</strong></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 </blockquote>
 <p> You can refer to my GitHub repository for <a href="https://github.com/ericzhng/test-vs-code-windows-subsysytem-linux" target="_blank" rel="noopener">sample source code</a>. I’ve also attached the configuration files for vs-code, so you can have a glimpse.</p>
 <h3 id="Intellise-configuration-refer-to-file-c-cpp-properties-json"><a href="#Intellise-configuration-refer-to-file-c-cpp-properties-json" class="headerlink" title="Intellise configuration: refer to file c_cpp_properties.json."></a>Intellise configuration: refer to file <strong>c_cpp_properties.json</strong>.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;WSL&quot;,</span><br><span class="line">            &quot;intelliSenseMode&quot;: &quot;gcc-x64&quot;,</span><br><span class="line">            &quot;compilerPath&quot;: &quot;/usr/bin/gcc&quot;,</span><br><span class="line">            &quot;includePath&quot;: [</span><br><span class="line">                &quot;$&#123;workspaceFolder&#125;/**&quot;,</span><br><span class="line">                &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include/c++/5&quot;,</span><br><span class="line">                &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include/x86_64-linux-gnu/c++/5&quot;,</span><br><span class="line">                &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include/c++/5/backward&quot;,</span><br><span class="line">                &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/lib/gcc/x86_64-linux-gnu/5/include&quot;,</span><br><span class="line">                &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/local/include&quot;,</span><br><span class="line">                &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed&quot;,</span><br><span class="line">                &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include/x86_64-linux-gnu&quot;,</span><br><span class="line">                &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;defines&quot;: [</span><br><span class="line">                &quot;__linux__&quot;,</span><br><span class="line">                &quot;__x86_64__&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;browse&quot;: &#123;</span><br><span class="line">                &quot;path&quot;: [</span><br><span class="line">                    &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include/c++/5&quot;,</span><br><span class="line">                    &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include/x86_64-linux-gnu/c++/5&quot;,</span><br><span class="line">                    &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/lib/gcc/x86_64-linux-gnu/5/include&quot;,</span><br><span class="line">                    &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/local/include&quot;,</span><br><span class="line">                    &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed&quot;,</span><br><span class="line">                    &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include/x86_64-linux-gnu&quot;,</span><br><span class="line">                    &quot;$&#123;localappdata&#125;/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/include/*&quot;</span><br><span class="line">                ],</span><br><span class="line">                &quot;limitSymbolsToIncludedHeaders&quot;: true,</span><br><span class="line">                &quot;databaseFilename&quot;: &quot;&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;cStandard&quot;: &quot;c11&quot;,</span><br><span class="line">            &quot;cppStandard&quot;: &quot;c++17&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;version&quot;: 4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 <h3 id="Tasks-configuration-refer-to-file-tasks-json"><a href="#Tasks-configuration-refer-to-file-tasks-json" class="headerlink" title="Tasks configuration: refer to file tasks.json."></a>Tasks configuration: refer to file <strong>tasks.json</strong>.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // See https://go.microsoft.com/fwlink/?LinkId=733558</span><br><span class="line">    // for the documentation about the tasks.json format</span><br><span class="line">    &quot;version&quot;: &quot;2.0.0&quot;,</span><br><span class="line">    &quot;command&quot;: &quot;bash&quot;,</span><br><span class="line">    //&quot;runner&quot;: &quot;terminal&quot;,</span><br><span class="line">    &quot;tasks&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;label&quot;: &quot;build&quot;,</span><br><span class="line">            &quot;type&quot;: &quot;shell&quot;,</span><br><span class="line">            &quot;command&quot;: &quot;g++ -g test.cpp -o maintest.out &amp;&amp; echo &apos;success!&apos;&quot;,</span><br><span class="line">            &quot;group&quot;: &#123;</span><br><span class="line">                &quot;kind&quot;: &quot;build&quot;,</span><br><span class="line">                &quot;isDefault&quot;: true</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;problemMatcher&quot;: []</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;label&quot;: &quot;run&quot;,</span><br><span class="line">            &quot;type&quot;: &quot;shell&quot;,</span><br><span class="line">            &quot;command&quot;: &quot;./maintest.out&quot;,</span><br><span class="line">            &quot;group&quot;: &#123;</span><br><span class="line">                &quot;kind&quot;: &quot;build&quot;,</span><br><span class="line">                &quot;isDefault&quot;: true</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;problemMatcher&quot;: []</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="Debug-configuration-refer-to-file-launch-json"><a href="#Debug-configuration-refer-to-file-launch-json" class="headerlink" title="Debug configuration: refer to file launch.json."></a>Debug configuration: refer to file <strong>launch.json</strong>.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // Use IntelliSense to learn about possible attributes.</span><br><span class="line">    // Hover to view descriptions of existing attributes.</span><br><span class="line">    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;name&quot;: &quot;(gdb) Bash on Windows Launch&quot;,</span><br><span class="line">            &quot;type&quot;: &quot;cppdbg&quot;,</span><br><span class="line">            &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">            &quot;program&quot;: &quot;./maintest.out&quot;,</span><br><span class="line">            &quot;args&quot;: [],</span><br><span class="line">            &quot;stopAtEntry&quot;: false,</span><br><span class="line">            // NOTE: you have to specify explicitly the location of files</span><br><span class="line">            &quot;cwd&quot;: &quot;/mnt/e/Repos/MyRepos/test-vs-code-windows-subsysytem-linux&quot;,</span><br><span class="line">            &quot;environment&quot;: [],</span><br><span class="line">            &quot;externalConsole&quot;: true,</span><br><span class="line">            &quot;windows&quot;: &#123;</span><br><span class="line">                &quot;MIMode&quot;: &quot;gdb&quot;,</span><br><span class="line">                &quot;setupCommands&quot;: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,</span><br><span class="line">                        &quot;text&quot;: &quot;-enable-pretty-printing&quot;,</span><br><span class="line">                        &quot;ignoreFailures&quot;: true</span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;pipeTransport&quot;: &#123;</span><br><span class="line">                &quot;debuggerPath&quot;: &quot;/usr/bin/gdb&quot;,</span><br><span class="line">                &quot;pipeProgram&quot;: &quot;c:\\Windows\\WinSxS\\amd64_microsoft-windows-lxss-bash_31bf3856ad364e35_10.0.17134.1_none_251beae725bc7de5\\bash.exe&quot;,</span><br><span class="line">                &quot;pipeArgs&quot;: [&quot;-c&quot;],</span><br><span class="line">                &quot;pipeCwd&quot;: &quot;&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;sourceFileMap&quot;: &#123;</span><br><span class="line">                &quot;/mnt/c&quot;: &quot;c:\\&quot;,</span><br><span class="line">                &quot;/mnt/e&quot;: &quot;e:\\&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="Common-errors"><a href="#Common-errors" class="headerlink" title="Common errors"></a>Common errors</h2><p>Sometimes after you specified everything above, you might come to some errors shown below:</p>
 <ul>
 <li><img src="pycharm/error.png" alt="image missing"> <strong>Commands not found!</strong><ul>
@@ -433,7 +439,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/10/vs-code-cpp/" data-id="cjpdifslz000f4kuvs44wxgqb" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/10/vs-code-cpp/" data-id="cjxds483b002v0kw0ztczte35" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -556,6 +562,25 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="title">Difference between Big and Little Endian Byte Order</a></p>
+                            <p class="item-date"><time datetime="2018-12-08T23:11:53.000Z" itemprop="datePublished">2018-12-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" class="thumbnail">
     
     
@@ -629,25 +654,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Use tensorflow model API in Google Colaboratory" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/13/google-colab-tensorflow/" class="title">Use tensorflow model API in Google Colaboratory</a></p>
-                            <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -689,7 +695,7 @@ ga('send', 'pageview');
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2018 Program Solution Now (_PSN_)<br>
+            &copy; 2019 Program Solution Now (_PSN_)<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
