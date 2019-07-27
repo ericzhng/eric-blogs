@@ -3,19 +3,22 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>Difference between Big and Little Endian Byte Order | _PSN_ HOMEPAGE</title>
+    <title>Compare the difference between Cygwin, MinGW and WSL | _PSN_ HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Understanding Big and Little Endian Byte Order There are two links which give very good explanation of the difference between them. Normally you don’t need to worry about it if you are working on a si">
+    <meta name="description" content="This blog shows some differences among three alteratives to compile open source codes in Windows.">
+<meta name="keywords" content="Linux,WSL,Cygwin,MinGW">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Difference between Big and Little Endian Byte Order">
-<meta property="og:url" content="http://ericzhng.github.io/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/index.html">
+<meta property="og:title" content="Compare the difference between Cygwin, MinGW and WSL">
+<meta property="og:url" content="http://ericzhng.github.io/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/index.html">
 <meta property="og:site_name" content="_PSN_ HOMEPAGE">
-<meta property="og:description" content="Understanding Big and Little Endian Byte Order There are two links which give very good explanation of the difference between them. Normally you don’t need to worry about it if you are working on a si">
+<meta property="og:description" content="This blog shows some differences among three alteratives to compile open source codes in Windows.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-08T23:17:08.219Z">
+<meta property="og:image" content="http://ericzhng.github.io/eric-blogs/images/wsl-cygwin-mingw/wsl-cygwin-mingw.png">
+<meta property="og:updated_time" content="2019-07-26T00:56:36.950Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Difference between Big and Little Endian Byte Order">
-<meta name="twitter:description" content="Understanding Big and Little Endian Byte Order There are two links which give very good explanation of the difference between them. Normally you don’t need to worry about it if you are working on a si">
+<meta name="twitter:title" content="Compare the difference between Cygwin, MinGW and WSL">
+<meta name="twitter:description" content="This blog shows some differences among three alteratives to compile open source codes in Windows.">
+<meta name="twitter:image" content="http://ericzhng.github.io/eric-blogs/images/wsl-cygwin-mingw/wsl-cygwin-mingw.png">
     
 
     
@@ -173,7 +176,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                10
+                11
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -225,15 +228,23 @@ ga('send', 'pageview');
 </aside>
 
             
-            <section id="main"><article id="post-Difference-between-Big-and-Little-Endian-Byte-Order" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-comparison-cygwin-mingw-wsl" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
+        
+            
+	
+		<img src="/eric-blogs/images/wsl-cygwin-mingw/wsl-cygwin-mingw.png" class="article-banner" />
+	
+
+
+
         
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-            Difference between Big and Little Endian Byte Order
+            Compare the difference between Cygwin, MinGW and WSL
         </h1>
     
 
@@ -242,14 +253,24 @@ ga('send', 'pageview');
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/">
-            <time datetime="2018-12-08T23:11:53.000Z" itemprop="datePublished">2018-12-08</time>
+        <a href="/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/">
+            <time datetime="2019-07-25T04:00:00.000Z" itemprop="datePublished">2019-07-25</time>
         </a>
     </div>
 
 
                         
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a>
+    </div>
+
                         
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/eric-blogs/tags/Cygwin/">Cygwin</a>, <a class="tag-link" href="/eric-blogs/tags/Linux/">Linux</a>, <a class="tag-link" href="/eric-blogs/tags/MinGW/">MinGW</a>, <a class="tag-link" href="/eric-blogs/tags/WSL/">WSL</a>
+    </div>
+
                     </div>
                 
             </header>
@@ -258,10 +279,64 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>Understanding Big and Little Endian Byte Order</p>
-<p>There are two links which give very good explanation of the difference between them. Normally you don’t need to worry about it if you are working on a single machine. You only worry this if you are transferring data from one machine to another.</p>
-<p><a href="https://betterexplained.com/articles/understanding-big-and-little-endian-byte-order/" target="_blank" rel="noopener">https://betterexplained.com/articles/understanding-big-and-little-endian-byte-order/</a></p>
-<p><a href="https://www.geeksforgeeks.org/little-and-big-endian-mystery/" target="_blank" rel="noopener">https://www.geeksforgeeks.org/little-and-big-endian-mystery/</a></p>
+            <p>This blog shows some differences among three alteratives to compile open source codes in Windows. </p>
+<a id="more"></a>
+
+<h2 id="Cygwin"><a href="#Cygwin" class="headerlink" title="Cygwin"></a>Cygwin</h2><ul>
+<li><p>Cygwin makes porting Unix-based applications to Windows much easier, by emulating many of the small details that Unix-based operating systems provide, and are documented by the POSIX standards. Your application can use Unix feature such as pipes, Unix-style file and directory access, and so forth, and it can be compiled with Cygwin which will act as a compatibility layer around your application, so that many of those Unix-specific paradigms can continue to be used.</p>
+</li>
+<li><p>You can compile codes in Cygwin, and it will run on Cygwin. If you distribute it along with the Cygwin runtime library (cygwin1.dll), you have to compile with its open source license.</p>
+</li>
+<li><p>Cygwin applications by principle are not considered a “Native Win32 application” because it relies on the Cygwin POSIX Emulation DLL or cygwin1.dll for Posix functions and does not use win32 functions directly.</p>
+</li>
+<li><p>From Cygwin’s website: Cygwin is a Linux-like environment for Windows. It consists of two parts: A DLL (cygwin1.dll) which acts as a Linux API emulation layer providing substantial Linux API functionality; and a collection of tools which provide Linux look and feel.</p>
+</li>
+</ul>
+<h2 id="MinGW"><a href="#MinGW" class="headerlink" title="MinGW"></a>MinGW</h2><ul>
+<li><p>MinGW is simply a Windows port of the GNU compiler tools, such as GCC, Make, Bash, and so on. It does not attempt to emulate or provide comprehensive compatibility with Unix, but instead it provides the minimum necessary environment to use GCC (the GNU compiler) and a small number of other tools on Windows.</p>
+</li>
+<li><p>MinGW does not have a Unix emulation layer like Cygwin. By default, code compiled in MinGW’s GCC will compile to a native Windows X86 target, including .exe and .dll files, though you could also cross-compile with the right settings, since you are basically using the GNU compiler tools suite.</p>
+</li>
+<li><p>MinGW is essentially an alternative to the Microsoft Visual C++ compiler and its associated linking/make tools. It may be possible in some cases to use MinGW to compile something that was intended for compiling with Microsoft Visual C++, with the right libraries and in some cases with other modifications.</p>
+</li>
+<li><p>MinGW includes some basic standard libraries for interacting with the Windows operating system, but as with the normal standard libraries included in the GNU compiler collection these don’t impose licensing restrictions on software you have created.</p>
+</li>
+<li><p>Best option to port Linux codes to Windows native.</p>
+</li>
+<li><p>MinGW on the other hand, provides functions supplied by the Win32 API. While porting applications under MinGW, functions not native to Win32 such as fork(), mmap(), or ioctl() will need to be reimplemented into Win32 equivalents for the application to function properly.</p>
+</li>
+<li><p>In MinGW, the MSYS is a collection of GNU utilities such as bash, make, gawk and grep to allow building of applications. The problem is there’s no /usr directory psychically. The root (/) is considered as usr (/usr) path – so you cannot create one either. The problem arises while a program depends on third party library – there is no place to put this third party library so that the default search path can find the library file. Usually in linux /usr/local/lib is the default library search path. So the client program cannot configure with ”./configure”. You will need special modification on LIBRARY_PATH environment variable which is very tedious and cumbersome. So to run the program which needs lots of dependency on other libraries, I would prefer Cigwin over minGW.</p>
+</li>
+<li><p>You can also get a small UNIX/POSIX like environment, compiled with MinGW called MSYS. It doesn’t have anywhere near all the features of Cygwin, but is ideal for programmers wanting to use MinGW.</p>
+</li>
+<li><p>From Mingw’s website: MinGW (“Minimalistic GNU for Windows”) is a collection of freely available and freely distributable Windows specific header files and import libraries combined with GNU toolsets that allow one to produce native Windows programs that do not rely on any 3rd-party C runtime DLLs</p>
+</li>
+<li><p>MinGW is higher performance than Cygwin, but it’s also 32-bit which may be a problem with your applications. There is a 64-bit environment similar to MinGW but it’s a different project.</p>
+</li>
+<li><p>MinGW-w64 is in all senses the successor to MinGW.org’s version. They provide 32 and 64 bit compilers, along with some arm support as well.</p>
+</li>
+</ul>
+<h2 id="WSL"><a href="#WSL" class="headerlink" title="WSL"></a>WSL</h2><ul>
+<li><p>WSL is a real Linux kernel built on a lightweight VM.</p>
+</li>
+<li><p>There is a separate post talking about how to setup Linux subsystem in Windows, please find it within this website.</p>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ul>
+<li><ol>
+<li><a href="https://www.codeproject.com/Articles/472809/Cygwin-vs-MinGW-What-to-Prefer-When" target="_blank" rel="noopener">Cygwin vs. MinGW – What to Prefer When</a></li>
+</ol>
+</li>
+<li><ol start="2">
+<li><a href="https://stackoverflow.com/questions/771756/what-is-the-difference-between-cygwin-and-mingw" target="_blank" rel="noopener">What is the difference between Cygwin and MinGW?</a></li>
+</ol>
+</li>
+<li><ol start="3">
+<li><a href="https://devblogs.microsoft.com/cppblog/targeting-windows-subsystem-for-linux-from-visual-studio/" target="_blank" rel="noopener">Targeting the Windows Subsystem for Linux from Visual Studio
+</a></li>
+</ol>
+</li>
+</ul>
 
         
         </div>
@@ -272,7 +347,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" data-id="cjxzlzhvm0006vsw0in4zjrhp" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/" data-id="cjykvg4sn000244w03bihpcjr" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -348,9 +423,9 @@ ga('send', 'pageview');
 <nav id="article-nav">
     
     
-        <a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/eric-blogs/2018/12/08/big-and-little-endian-byte-order/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Switch terminals in vs-code</div>
+            <div class="article-nav-title">Talking about Big and Little Endian Byte Order</div>
         </a>
     
 </nav>
@@ -372,7 +447,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/eric-blogs/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/eric-blogs/tags/Boot/" style="font-size: 10px;">Boot</a> <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 12.5px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Jupyter/" style="font-size: 10px;">Jupyter</a> <a href="/eric-blogs/tags/Operating-system/" style="font-size: 10px;">Operating system</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 12.5px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 12.5px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 17.5px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 15px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 15px;">vs-code</a>
+            <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/Cygwin/" style="font-size: 10px;">Cygwin</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/eric-blogs/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/eric-blogs/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 12.5px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 12.5px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 17.5px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 10px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 15px;">vs-code</a>
         </div>
     </div>
 
@@ -386,19 +461,38 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="thumbnail">
+                            <a href="/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/eric-blogs/images/wsl-cygwin-mingw/wsl-cygwin-mingw.png)" alt="Compare the difference between Cygwin, MinGW and WSL" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="title">Difference between Big and Little Endian Byte Order</a></p>
-                            <p class="item-date"><time datetime="2018-12-08T23:11:53.000Z" itemprop="datePublished">2018-12-08</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/" class="title">Compare the difference between Cygwin, MinGW and WSL</a></p>
+                            <p class="item-date"><time datetime="2019-07-25T04:00:00.000Z" itemprop="datePublished">2019-07-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/12/08/big-and-little-endian-byte-order/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/eric-blogs/images/big-small-edian.gif)" alt="Talking about Big and Little Endian Byte Order" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/12/08/big-and-little-endian-byte-order/" class="title">Talking about Big and Little Endian Byte Order</a></p>
+                            <p class="item-date"><time datetime="2018-12-08T05:00:00.000Z" itemprop="datePublished">2018-12-08</time></p>
                         </div>
                     </li>
                 
@@ -415,28 +509,9 @@ ga('send', 'pageview');
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
                             <p class="item-title"><a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" class="title">Switch terminals in vs-code</a></p>
-                            <p class="item-date"><time datetime="2018-12-07T04:07:07.000Z" itemprop="datePublished">2018-12-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images_posts/acer-laptop-ssd-no-bootable-device.jpg)" alt="Laptop install SSD show error &#34;No Bootable Device&#34;" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Hardware/">Hardware</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Hardware/SSD/">SSD</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" class="title">Laptop install SSD show error &#34;No Bootable Device&#34;</a></p>
-                            <p class="item-date"><time datetime="2018-12-07T04:04:15.000Z" itemprop="datePublished">2018-12-06</time></p>
+                            <p class="item-date"><time datetime="2018-12-06T05:00:00.000Z" itemprop="datePublished">2018-12-06</time></p>
                         </div>
                     </li>
                 
@@ -446,15 +521,15 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Install Tensorflow (CPU) in PyCharm in Windows 10" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Install Tensorflow (CPU) in PyCharm in Windows" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="title">Install Tensorflow (CPU) in PyCharm in Windows 10</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="title">Install Tensorflow (CPU) in PyCharm in Windows</a></p>
                             <p class="item-date"><time datetime="2018-10-17T04:00:00.000Z" itemprop="datePublished">2018-10-17</time></p>
                         </div>
                     </li>
@@ -465,7 +540,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/13/github-page-hexo/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/hexo-logo.png)" alt="Set up hexo for GitHub page" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/hexo-logo.png)" alt="Setup Hexo for GitHub Page in either Windows or WSL" class="thumbnail-image"></span>
     
 </a>
 
@@ -473,8 +548,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Website/">Website</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/13/github-page-hexo/" class="title">Set up hexo for GitHub page</a></p>
-                            <p class="item-date"><time datetime="2018-10-13T23:40:00.000Z" itemprop="datePublished">2018-10-13</time></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/13/github-page-hexo/" class="title">Setup Hexo for GitHub Page in either Windows or WSL</a></p>
+                            <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
                         </div>
                     </li>
                 

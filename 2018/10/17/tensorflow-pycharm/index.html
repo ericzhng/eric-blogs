@@ -3,21 +3,21 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>Install Tensorflow (CPU) in PyCharm in Windows 10 | _PSN_ HOMEPAGE</title>
+    <title>Install Tensorflow (CPU) in PyCharm in Windows | _PSN_ HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.     M">
-<meta name="keywords" content="Windows,PyCharm,Tensorflow,Anaconda,Python">
+    <meta name="description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.">
+<meta name="keywords" content="Windows,PyCharm,Tensorflow,Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Install Tensorflow (CPU) in PyCharm in Windows 10">
+<meta property="og:title" content="Install Tensorflow (CPU) in PyCharm in Windows">
 <meta property="og:url" content="http://ericzhng.github.io/eric-blogs/2018/10/17/tensorflow-pycharm/index.html">
 <meta property="og:site_name" content="_PSN_ HOMEPAGE">
-<meta property="og:description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.     M">
+<meta property="og:description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://ericzhng.github.io/eric-blogs/images/tensorflow.jpg">
-<meta property="og:updated_time" content="2018-12-07T04:02:31.201Z">
+<meta property="og:updated_time" content="2019-07-26T01:24:04.445Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Install Tensorflow (CPU) in PyCharm in Windows 10">
-<meta name="twitter:description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.     M">
+<meta name="twitter:title" content="Install Tensorflow (CPU) in PyCharm in Windows">
+<meta name="twitter:description" content="This blog shows how to install tensorflow for python in Windows 10, preferably in PyCharm. Tensorflow can be installed either with separate python installer or Anaconda open source distribution.">
 <meta name="twitter:image" content="http://ericzhng.github.io/eric-blogs/images/tensorflow.jpg">
     
 
@@ -176,7 +176,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                10
+                11
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -233,7 +233,7 @@ ga('send', 'pageview');
         
             
 	
-		<img src="/eric-blogs/images_posts/tensorflow-pycharm.jpg" class="article-banner" />
+		<img src="/eric-blogs/images/tensorflow-pycharm.jpg" class="article-banner" />
 	
 
 
@@ -244,7 +244,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            Install Tensorflow (CPU) in PyCharm in Windows 10
+            Install Tensorflow (CPU) in PyCharm in Windows
         </h1>
     
 
@@ -262,13 +262,13 @@ ga('send', 'pageview');
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a>
+        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/eric-blogs/tags/Anaconda/">Anaconda</a>, <a class="tag-link" href="/eric-blogs/tags/PyCharm/">PyCharm</a>, <a class="tag-link" href="/eric-blogs/tags/Python/">Python</a>, <a class="tag-link" href="/eric-blogs/tags/Tensorflow/">Tensorflow</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
+        <a class="tag-link" href="/eric-blogs/tags/PyCharm/">PyCharm</a>, <a class="tag-link" href="/eric-blogs/tags/Python/">Python</a>, <a class="tag-link" href="/eric-blogs/tags/Tensorflow/">Tensorflow</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
     </div>
 
                     </div>
@@ -280,83 +280,61 @@ ga('send', 'pageview');
         
             
             <p>This blog shows how to install <strong>tensorflow</strong> for python in Windows 10, preferably in PyCharm. <strong>Tensorflow</strong> can be installed either with separate python installer or Anaconda open source distribution. </p>
-<!-- TOC -->
-
-<ul>
-<li><a href="#major-steps">Major steps</a></li>
-<li><a href="#common-errors">Common errors</a></li>
-<li><a href="#reference">Reference</a></li>
-</ul>
-<!-- /TOC -->
-
 <a id="more"></a>
 
-<h2 id="Major-steps"><a href="#Major-steps" class="headerlink" title="Major steps"></a>Major steps</h2><blockquote>
-<ol>
-<li>Download PyCharm Community Edition from <a href="https://www.jetbrains.com/pycharm/download/#section=windows" target="_blank" rel="noopener">JetBrain official website</a> and install it in Windows 10.</li>
+<h2 id="Major-steps"><a href="#Major-steps" class="headerlink" title="Major steps"></a>Major steps</h2><ol>
+<li><p>Download PyCharm Community Edition from <a href="https://www.jetbrains.com/pycharm/download/#section=windows" target="_blank" rel="noopener">JetBrain official website</a> and install it in Windows 10.</p>
+</li>
+<li><p>Download and install Anaconda from <a href="https://www.anaconda.com/download/#windows" target="_blank" rel="noopener">here</a>. Choose whatever python version you use.</p>
+</li>
+<li><p>Open PyCharm, click <em>Create New Project</em>, give the folder a name (ex. <code>tensorflow-test</code>) in <em>Location</em>, select <em>New environment using Virtualenv</em> and choose <em>Base interpreter</em> as python.exe in Anaconda3 folder. Click OK to continue.</p>
+</li>
 </ol>
-</blockquote>
-<blockquote>
-<ol start="2">
-<li>Download and install Anaconda from <a href="https://www.anaconda.com/download/#windows" target="_blank" rel="noopener">here</a>. Choose whatever python version you use.</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="3">
-<li>Open PyCharm, click <em>Create New Project</em>, give the folder a name (ex. <code>tensorflow-test</code>) in <em>Location</em>, select <em>New environment using Virtualenv</em> and choose <em>Base interpreter</em> as python.exe in Anaconda3 folder. Click OK to continue.</li>
-</ol>
-</blockquote>
-<p><img src="pycharm/create-project-conda.png" alt="image missing" title="Create Project"></p>
-<blockquote>
+<p><img src="/eric-blogs/images/pycharm/create-project-conda.png" alt="Create new virtual environment"></p>
 <ol start="4">
 <li>(<strong>alternative of 3</strong>) Open PyCharm, click <em>Create New Project</em>, give the folder a name in <em>Location</em>, select <em>Existing interpreter</em>. If none is shown in the <em>Interpreter</em>, click “…” and in <em>Add Python Interpreter</em> dialog, choose native python.exe. Click OK to go back and then create.</li>
 </ol>
-</blockquote>
-<p><img src="pycharm/create-project-native.png" alt="image missing" title="Create Project"></p>
-<p><img src="pycharm/add-exist-python-interpreter.png" alt="image missing" title="Add Python Interpreter"></p>
-<blockquote>
+<p><img src="/eric-blogs/images/pycharm/create-project-native.png" alt="Use existing python interpreter"></p>
+<p><img src="/eric-blogs/images/pycharm/add-exist-python-interpreter.png" alt="If no interpreter, click ... to add one"></p>
 <ol start="5">
-<li>Go to File -&gt; Settings, search for <em>Porject Interpreter</em>, ensure that corresponding python version is used as the interpreter. Then install the python packages you need to install by clicking “+” on top right, such as <code>numpy, matplotlib, pandas, python-opencv</code> etc.</li>
+<li><p>Go to File -&gt; Settings, search for <em>Porject Interpreter</em>, ensure that corresponding python version is used as the interpreter. Then install the python packages you need to install by clicking “+” on top right, such as <code>numpy, matplotlib, pandas, python-opencv</code> etc.</p>
+</li>
+<li><p>To install <code>tensorflow</code>, use pip. Click <em>Start</em> in Windows (bottom left of your screen), type <em>Anaconda Prompt</em> and open the command window. Type in <em>activate tensorflow-test</em> to activate your virtual environment in Anaconda. Then type <code>pip install tensorflow</code> to install tensorflow.</p>
+</li>
+<li><p>(<strong>alternative of 6</strong>) Open Windows system command prompt (cmd), type following commands to verify that you are installing on correct python versions. Then type in <code>pip install tensorflow</code> to install newest tensorflow package. You can also install a previous version using <code>pip install tensorflow=1.10.0</code>, for example.</p>
+<p>Make sure python version and pip versions are the same. Use <code>python --version</code> and <code>pip --version</code> to get the versions.</p>
+</li>
+<li><p>To test whether your installation works, create a python file named <code>test.py</code>. Copy the following python scripts in <code>test.py</code> and execute it in PyCharm. If it outputs the current tensorflow version, it means that <strong>tensorflow</strong> is successfully installed.</p>
+<p> <code>import tensorflow as tf</code><br> <code>print(tf.__version__)</code></p>
+</li>
 </ol>
-</blockquote>
-<blockquote>
-<ol start="6">
-<li>To install <code>tensorflow</code>, use pip. Click <em>Start</em> in Windows (bottom left of your screen), type <em>Anaconda Prompt</em> and open the command window. Type in <em>activate tensorflow-test</em> to activate your virtual environment in Anaconda. Then type <code>pip install tensorflow</code> to install tensorflow.</li>
-</ol>
-</blockquote>
-<blockquote>
-<ol start="7">
-<li>(<strong>alternative of 6</strong>) Open Windows system command prompt (cmd), type following commands to verify that you are installing on correct python versions. Then type in <code>pip install tensorflow</code> to install newest tensorflow package. You can also install a previous version using <code>pip install tensorflow=1.10.0</code>, for example.</li>
-</ol>
-</blockquote>
-<pre><code>`python --version`
-`pip --version`</code></pre><blockquote>
-<ol start="8">
-<li>To test whether your installation works, create a python file named <code>test.py</code>. Copy the following python scripts in <code>test.py</code> and execute it in PyCharm. If it outputs the current tensorflow version, it means that <strong>tensorflow</strong> is successfully installed.</li>
-</ol>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line">print(tf.__version__)</span><br></pre></td></tr></table></figure>
-
-<p><img src="pycharm/create-new-python-file.png" alt="image missing" title="Create a new python file"></p>
-<h2 id="Common-errors"><a href="#Common-errors" class="headerlink" title="Common errors"></a>Common errors</h2><ul>
-<li><img src="pycharm/error.png" alt="image missing"> <strong>“ImportError: DLL load failed: A dynamic link library (DLL) initialization routine failed.”</strong><ul>
+<p><img src="/eric-blogs/images/pycharm/create-new-python-file.png" alt="Create a new python file"></p>
+<h2 id="Common-issues"><a href="#Common-issues" class="headerlink" title="Common issues"></a>Common issues</h2><h3 id="Choosing-default-python-version-to-run"><a href="#Choosing-default-python-version-to-run" class="headerlink" title="Choosing default python version to run:"></a>Choosing default python version to run:</h3><ul>
+<li><p>Sometimes you might have multiple versions of python installed. You can configure which one to use by running the following:<br><code>sudo update-alternatives --config python</code></p>
+</li>
+<li><p>it might give an error:<br><code>update-alternatives: error: no alternatives for python3</code></p>
+</li>
+<li><p>You need to update your update-alternatives , then you will be able to set your default python version. Now you can run the following to setup that:<br><code>sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1</code><br><code>sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2</code></p>
+</li>
+</ul>
+<ul>
+<li><p>now you choose your favoriate python version as default:<br><code>sudo update-alternatives --config python</code></p>
+</li>
+<li><p>or use the following command to set python3.6 as default:<br><code>sudo update-alternatives  --set python /usr/bin/python3.6</code></p>
+</li>
+</ul>
+<h3 id="“ImportError-DLL-load-failed-A-dynamic-link-library-DLL-initialization-routine-failed-”"><a href="#“ImportError-DLL-load-failed-A-dynamic-link-library-DLL-initialization-routine-failed-”" class="headerlink" title="“ImportError: DLL load failed: A dynamic link library (DLL) initialization routine failed.”"></a><strong>“ImportError: DLL load failed: A dynamic link library (DLL) initialization routine failed.”</strong></h3><ul>
 <li><strong>Reason</strong>: Some old CPUs (typically for CPUs before 2011) do not support AVX type instruction set extension, so you need to check whether your machine support AVX/AVX2 before installing pre-complied tensorflow wheel file.</li>
 <li><strong>Solution</strong>: If you indeed have older CPUs, you can still make it work by installing tensorflow compiled compatible with other instruction set extensions, such as <code>SSE2</code>. Please download specific version of tensorflow from <a href="https://github.com/ericzhng/tensorflow-windows-wheel/tree/master/1.11.0/py36/CPU" target="_blank" rel="noopener">here</a>.</li>
 <li>Another <strong>option</strong> you can go is to build tensorflow from source. For details, please refer to <a href="#reference">3</a>.</li>
-<li>Here is a <strong>list of CPUs compatible</strong> with AVX instructions set extensions:<br><a href="https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX</a></li>
+<li>Here is a <strong>list of CPUs compatible</strong> with AVX instructions set extensions:<a href="https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX</a></li>
 </ul>
-</li>
-</ul>
-<ul>
-<li><img src="pycharm/error.png" alt="image missing"> <strong>“tensorflow-*.whl is not supported wheel on this platform”</strong><ul>
+<h3 id="“tensorflow-whl-is-not-supported-wheel-on-this-platform”"><a href="#“tensorflow-whl-is-not-supported-wheel-on-this-platform”" class="headerlink" title="“tensorflow-*.whl is not supported wheel on this platform”"></a><strong>“tensorflow-*.whl is not supported wheel on this platform”</strong></h3><ul>
 <li><strong>Reason</strong>: Currently tensorflow is only supported up to Python 36. While newest Anaconda comes with Python 37 package.</li>
 <li><strong>Solution</strong>: You can go to File -&gt; Settings, create a new virtual conda environment, and select Python 36. Then install tensorflow either from repository or downloaded file.</li>
 </ul>
-</li>
-</ul>
-<p><img src="pycharm/create-conda-envs.png" alt="image missing" title="Add Python Interpreter"></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><hr>
-<ul>
+<p><img src="/eric-blogs/images/pycharm/create-conda-envs.png" alt="Add Python Interpreter"></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><ol>
 <li><a href="https://gist.github.com/hi2p-perim/7855506#file-ssecheck-cpp" target="_blank" rel="noopener">Check SSE/AVX instruction support</a>.</li>
 </ol>
@@ -380,7 +358,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/17/tensorflow-pycharm/" data-id="cjxzlzhwj000hvsw0fxssi40q" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/10/17/tensorflow-pycharm/" data-id="cjykvg4tm000h44w0tbeebgej" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -455,11 +433,11 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    Laptop install SSD show error &#34;No Bootable Device&#34;
+                    Switch terminals in vs-code
                 
             </div>
         </a>
@@ -467,7 +445,7 @@ ga('send', 'pageview');
     
         <a href="/eric-blogs/2018/10/13/github-page-hexo/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Set up hexo for GitHub page</div>
+            <div class="article-nav-title">Setup Hexo for GitHub Page in either Windows or WSL</div>
         </a>
     
 </nav>
@@ -489,7 +467,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/eric-blogs/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/eric-blogs/tags/Boot/" style="font-size: 10px;">Boot</a> <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 12.5px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Jupyter/" style="font-size: 10px;">Jupyter</a> <a href="/eric-blogs/tags/Operating-system/" style="font-size: 10px;">Operating system</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 12.5px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 12.5px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 17.5px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 15px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 15px;">vs-code</a>
+            <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/Cygwin/" style="font-size: 10px;">Cygwin</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/eric-blogs/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/eric-blogs/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 12.5px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 12.5px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 17.5px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 10px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 15px;">vs-code</a>
         </div>
     </div>
 
@@ -503,19 +481,38 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="thumbnail">
+                            <a href="/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/eric-blogs/images/wsl-cygwin-mingw/wsl-cygwin-mingw.png)" alt="Compare the difference between Cygwin, MinGW and WSL" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="title">Difference between Big and Little Endian Byte Order</a></p>
-                            <p class="item-date"><time datetime="2018-12-08T23:11:53.000Z" itemprop="datePublished">2018-12-08</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/" class="title">Compare the difference between Cygwin, MinGW and WSL</a></p>
+                            <p class="item-date"><time datetime="2019-07-25T04:00:00.000Z" itemprop="datePublished">2019-07-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/12/08/big-and-little-endian-byte-order/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/eric-blogs/images/big-small-edian.gif)" alt="Talking about Big and Little Endian Byte Order" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/12/08/big-and-little-endian-byte-order/" class="title">Talking about Big and Little Endian Byte Order</a></p>
+                            <p class="item-date"><time datetime="2018-12-08T05:00:00.000Z" itemprop="datePublished">2018-12-08</time></p>
                         </div>
                     </li>
                 
@@ -532,28 +529,9 @@ ga('send', 'pageview');
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
                             <p class="item-title"><a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" class="title">Switch terminals in vs-code</a></p>
-                            <p class="item-date"><time datetime="2018-12-07T04:07:07.000Z" itemprop="datePublished">2018-12-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images_posts/acer-laptop-ssd-no-bootable-device.jpg)" alt="Laptop install SSD show error &#34;No Bootable Device&#34;" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Hardware/">Hardware</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Hardware/SSD/">SSD</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" class="title">Laptop install SSD show error &#34;No Bootable Device&#34;</a></p>
-                            <p class="item-date"><time datetime="2018-12-07T04:04:15.000Z" itemprop="datePublished">2018-12-06</time></p>
+                            <p class="item-date"><time datetime="2018-12-06T05:00:00.000Z" itemprop="datePublished">2018-12-06</time></p>
                         </div>
                     </li>
                 
@@ -563,15 +541,15 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Install Tensorflow (CPU) in PyCharm in Windows 10" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Install Tensorflow (CPU) in PyCharm in Windows" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="title">Install Tensorflow (CPU) in PyCharm in Windows 10</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="title">Install Tensorflow (CPU) in PyCharm in Windows</a></p>
                             <p class="item-date"><time datetime="2018-10-17T04:00:00.000Z" itemprop="datePublished">2018-10-17</time></p>
                         </div>
                     </li>
@@ -582,7 +560,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/13/github-page-hexo/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/hexo-logo.png)" alt="Set up hexo for GitHub page" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/hexo-logo.png)" alt="Setup Hexo for GitHub Page in either Windows or WSL" class="thumbnail-image"></span>
     
 </a>
 
@@ -590,8 +568,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Website/">Website</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/13/github-page-hexo/" class="title">Set up hexo for GitHub page</a></p>
-                            <p class="item-date"><time datetime="2018-10-13T23:40:00.000Z" itemprop="datePublished">2018-10-13</time></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/13/github-page-hexo/" class="title">Setup Hexo for GitHub Page in either Windows or WSL</a></p>
+                            <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
                         </div>
                     </li>
                 

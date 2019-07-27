@@ -3,21 +3,21 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>Set up Jekyll for GitHub page in Windows | _PSN_ HOMEPAGE</title>
+    <title>Setup Jekyll for GitHub Page in Windows WSL | _PSN_ HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="In this blog, I want to talk about how to set up Jekyll in Windows environment, mainly Windows 10, since you can enable the Linux bash.">
-<meta name="keywords" content="Windows,GitHub,Jekyll,WSL,Website">
+    <meta name="description" content="In this blog, I want to talk about how to set up Jekyll in Windows 10 and generate static web pages to host on GitHub page. There are three major steps you should follow in order to successfully use J">
+<meta name="keywords" content="WSL,Jekyll,Website">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Set up Jekyll for GitHub page in Windows">
+<meta property="og:title" content="Setup Jekyll for GitHub Page in Windows WSL">
 <meta property="og:url" content="http://ericzhng.github.io/eric-blogs/2018/09/14/github-page-jekyll/index.html">
 <meta property="og:site_name" content="_PSN_ HOMEPAGE">
-<meta property="og:description" content="In this blog, I want to talk about how to set up Jekyll in Windows environment, mainly Windows 10, since you can enable the Linux bash.">
+<meta property="og:description" content="In this blog, I want to talk about how to set up Jekyll in Windows 10 and generate static web pages to host on GitHub page. There are three major steps you should follow in order to successfully use J">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://ericzhng.github.io/eric-blogs/images/github.svg">
-<meta property="og:updated_time" content="2018-12-07T04:02:31.194Z">
+<meta property="og:updated_time" content="2019-07-26T04:38:32.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Set up Jekyll for GitHub page in Windows">
-<meta name="twitter:description" content="In this blog, I want to talk about how to set up Jekyll in Windows environment, mainly Windows 10, since you can enable the Linux bash.">
+<meta name="twitter:title" content="Setup Jekyll for GitHub Page in Windows WSL">
+<meta name="twitter:description" content="In this blog, I want to talk about how to set up Jekyll in Windows 10 and generate static web pages to host on GitHub page. There are three major steps you should follow in order to successfully use J">
 <meta name="twitter:image" content="http://ericzhng.github.io/eric-blogs/images/github.svg">
     
 
@@ -176,7 +176,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                10
+                11
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -233,7 +233,7 @@ ga('send', 'pageview');
         
             
 	
-		<img src="/eric-blogs/images_posts/github-jekyll.jpg" class="article-banner" />
+		<img src="/eric-blogs/images/github-jekyll.jpg" class="article-banner" />
 	
 
 
@@ -244,7 +244,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-            Set up Jekyll for GitHub page in Windows
+            Setup Jekyll for GitHub Page in Windows WSL
         </h1>
     
 
@@ -262,13 +262,13 @@ ga('send', 'pageview');
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Website/">Website</a>
+        <a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/eric-blogs/tags/GitHub/">GitHub</a>, <a class="tag-link" href="/eric-blogs/tags/Jekyll/">Jekyll</a>, <a class="tag-link" href="/eric-blogs/tags/WSL/">WSL</a>, <a class="tag-link" href="/eric-blogs/tags/Website/">Website</a>, <a class="tag-link" href="/eric-blogs/tags/Windows/">Windows</a>
+        <a class="tag-link" href="/eric-blogs/tags/Jekyll/">Jekyll</a>, <a class="tag-link" href="/eric-blogs/tags/WSL/">WSL</a>, <a class="tag-link" href="/eric-blogs/tags/Website/">Website</a>
     </div>
 
                     </div>
@@ -279,110 +279,70 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>In this blog, I want to talk about how to set up Jekyll in Windows environment, mainly Windows 10, since you can enable the Linux bash.</p>
+            <p>In this blog, I want to talk about how to set up Jekyll in Windows 10 and generate static web pages to host on GitHub page. There are three major steps you should follow in order to successfully use Jekyll.</p>
 <a id="more"></a>
 
-<h1 id="Major-steps"><a href="#Major-steps" class="headerlink" title="Major steps"></a>Major steps</h1><h2 id="1-Set-up-Linux-subsystem-in-Windows-10"><a href="#1-Set-up-Linux-subsystem-in-Windows-10" class="headerlink" title="1. Set up Linux subsystem in Windows 10"></a>1. Set up Linux subsystem in Windows 10</h2><ul>
-<li>In Windows 10, go to Settings -&gt; Update &amp; Security -&gt; For Developers, select Developer Mode under “Use developer features”.</li>
-<li>Navigate to Control Panel -&gt; Programs and Features, Click “Turn Windows features on or off”, and toggle “Windows Subsystem for Linux” to on and click OK to return.</li>
-<li>Restart your computer to take effects.</li>
-<li>After restart, open Bash by searching it in search box, and type “y” to install the linux subsystem.<ul>
-<li>Sometimes, you will be prompted to go to Microsoft Store to download and install it.</li>
-<li>Choose ubuntu and click “Get” to download and install.</li>
+
+<h2 id="1-Set-up-Linux-subsystem-in-Windows-10"><a href="#1-Set-up-Linux-subsystem-in-Windows-10" class="headerlink" title="1. Set up Linux subsystem in Windows 10"></a>1. Set up Linux subsystem in Windows 10</h2><ul>
+<li>Please refer to my post titled “Setup Linux environment (WSL) in Windows” to setup WSL in Windows 10.</li>
 </ul>
+<h2 id="2-Install-all-necessary-files-for-Jekyll-in-WSL"><a href="#2-Install-all-necessary-files-for-Jekyll-in-WSL" class="headerlink" title="2. Install all necessary files for Jekyll in WSL"></a>2. Install all necessary files for Jekyll in WSL</h2><ul>
+<li><p>Open WSL Bash in Windows 10, and update our repo lists and packages<br>  <code>sudo apt-get update -y</code><br>  <code>sudo apt-get upgrade -y</code></p>
 </li>
-<li>Create a user name and password for an account.</li>
-<li>If everything goes successfully, you should be able to run common linux commands such as <code>clear</code> and <code>ls</code> in the Bash.</li>
-</ul>
-<h2 id="2-Install-all-necessary-files-for-Jekyll-in-Linux-subsystem"><a href="#2-Install-all-necessary-files-for-Jekyll-in-Linux-subsystem" class="headerlink" title="2. Install all necessary files for Jekyll in Linux subsystem"></a>2. Install all necessary files for Jekyll in Linux subsystem</h2><ul>
-<li><p>Open Bash in Windows 10, and update our repo lists and packages</p>
-<ul>
-<li><code>sudo apt-get update -y</code></li>
-<li><code>sudo apt-get upgrade -y</code></li>
-</ul>
+<li><p>(Optional) Add the repository from BrightBox, which has an optimized Ruby version in Ubuntu.<br> <code>sudo apt-add-repository ppa:brightbox/ruby-ng</code></p>
 </li>
-<li><p>(Optional) Add the repository from BrightBox, which has an optimized Ruby version in Ubuntu.</p>
-<ul>
-<li><code>sudo apt-add-repository ppa:brightbox/ruby-ng</code></li>
-</ul>
+<li><p>Before we install Jekyll, we need to make sure we have all the required dependencies.<br><code>sudo apt-get update</code><br><code>sudo apt-get install build-essential patch ruby ruby-dev zlib1g-dev liblzma-dev dh-autoreconf</code></p>
 </li>
-<li><p>Before we install Jekyll, we need to make sure we have all the required dependencies.</p>
-<ul>
-<li><code>sudo apt-get update</code></li>
-<li><code>sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev</code></li>
-<li>(might work as well, same function as last commands) <code>sudo apt-get install ruby ruby-dev make build-essential</code></li>
-</ul>
+<li><p>Update Ruby gems<br><code>sudo gem update</code></p>
 </li>
-<li><p>Update Ruby gems</p>
-<ul>
-<li><code>sudo gem update</code></li>
-</ul>
+<li><p>Install Jekyll<br><code>sudo gem install jekyll bundler</code></p>
 </li>
-<li><p>Install Jekyll</p>
-<ul>
-<li><code>sudo gem install jekyll bundler</code></li>
-</ul>
+<li><p>Test whether Jekyll is installed successfully<br><code>jekyll -v</code></p>
 </li>
-<li><p>Test whether Jekyll is installed successfully</p>
-<ul>
-<li><code>jekyll -v</code></li>
-</ul>
-</li>
-<li><p>Install all of the required gems</p>
-<ul>
-<li><code>bundle install</code></li>
-</ul>
+<li><p>Install all of the required gems<br><code>bundle install</code></p>
 </li>
 </ul>
 <h2 id="3-Build-your-local-Jekyll-site-forked-from-GitHub"><a href="#3-Build-your-local-Jekyll-site-forked-from-GitHub" class="headerlink" title="3. Build your local Jekyll site forked from GitHub"></a>3. Build your local Jekyll site forked from GitHub</h2><ul>
-<li>Open cmd, and type <code>bash</code> to get in Bash environment.</li>
-<li>In Bash, navigate to the root directory of your local Jekyll site repository.</li>
-<li>Run following command to run the Jekyll site:<ul>
-<li><code>bundle exec jekyll serve</code></li>
-</ul>
+<li><p>Open cmd, and type <code>bash</code> to get in Bash environment.</p>
 </li>
-<li>Preview the changes in your web browser at “localhost:4000”.</li>
+<li><p>In Bash, navigate to the root directory of your local Jekyll site repository.</p>
+</li>
+<li><p>Run following command to run the Jekyll site:<br><code>bundle exec jekyll serve</code></p>
+</li>
+<li><p>Preview the changes in your web browser at “localhost:4000”.</p>
+</li>
 </ul>
-<h1 id="Some-common-errors"><a href="#Some-common-errors" class="headerlink" title="Some common errors"></a>Some common errors</h1><h2 id="Error-1"><a href="#Error-1" class="headerlink" title="Error 1"></a>Error 1</h2><ul>
-<li><p>When executing <code>bundle exec jekyll serve</code>, you may came across errors like the following:</p>
+<h2 id="optional-install-Ruby-w-Devikit"><a href="#optional-install-Ruby-w-Devikit" class="headerlink" title="(optional): install Ruby w/ Devikit:"></a>(optional): install Ruby w/ Devikit:</h2><ul>
+<li><p>Download Ruby w/ Devikit from <a href="https://rubyinstaller.org/downloads/" target="_blank" rel="noopener">https://rubyinstaller.org/downloads/</a></p>
+</li>
+<li><p>Run the ‘ridk install’ step on the last stage of the installation wizard. This is needed for installing gems with native extensions. You can find addtional information regarding this in the RubyInstaller Documentation</p>
+</li>
+<li><p>Open a new command prompt window from the start menu, so that changes to the PATH environment variable becomes effective. Install Jekyll and Bundler via: <code>gem install jekyll bundler</code></p>
+</li>
+</ul>
+<h2 id="Some-common-issues"><a href="#Some-common-issues" class="headerlink" title="Some common issues:"></a>Some common issues:</h2><h3 id="Eror-when-running-jekyll-v"><a href="#Eror-when-running-jekyll-v" class="headerlink" title="Eror when running jekyll -v:"></a>Eror when running <code>jekyll -v</code>:</h3><ul>
+<li>“You have already activated public_suffix 3.1.0, but your Gemfile requires public_suffix 2.0.5. Prepending <code>bundle exec</code> to your command may solve this. (Gem::LoadError)”</li>
+</ul>
 <ul>
-<li>“Could not find minitest-5.11.3 in any of the sources”</li>
-<li>“Run <code>bundle install</code> to install missing gems.”</li>
+<li>You should add bundle exec before every jekyll command.</li>
 </ul>
+<h3 id="Error-when-running-bundle-exec-jekyll-serve"><a href="#Error-when-running-bundle-exec-jekyll-serve" class="headerlink" title="Error when running bundle exec jekyll serve:"></a>Error when running <code>bundle exec jekyll serve</code>:</h3><ul>
+<li><p>“Could not find minitest-5.11.3 in any of the sources. Run <code>bundle install</code> to install missing gems.”</p>
 </li>
-<li><p>Solution</p>
-<ul>
-<li>This is most probably you forget to execute last command in Step 2. Type <code>bundle install</code> in Bash and execute. You may be required to input your password.</li>
-</ul>
+<li><p>This is most probably you forget to execute last command in Step 2. Type <code>bundle install</code> in Bash and execute. You may be required to input your password.</p>
 </li>
 </ul>
-<h2 id="Error-2"><a href="#Error-2" class="headerlink" title="Error 2"></a>Error 2</h2><ul>
-<li><p>When executing <code>bundle install</code>, the following error messages might appear:</p>
-<ul>
-<li>“Gem::Ext::BuildError: ERROR: Failed to build gem native extension.”</li>
-<li>“An error occurred while installing nokogiri (1.8.4), and Bundler cannot continue. Make sure that <code>gem install nokogiri -v &#39;1.8.4&#39; --source &#39;https://rubygems.org/&#39;</code> succeeds before bundling.”</li>
-</ul>
+<h3 id="Error-when-running-bundle-install"><a href="#Error-when-running-bundle-install" class="headerlink" title="Error when running bundle install:"></a>Error when running <code>bundle install</code>:</h3><ul>
+<li><p>“Gem::Ext::BuildError: ERROR: Failed to build gem native extension. An error occurred while installing nokogiri (1.8.4), and Bundler cannot continue. Make sure that <code>gem install nokogiri -v &#39;1.8.4&#39; --source &#39;https://rubygems.org/&#39;</code> succeeds before bundling.”</p>
 </li>
-<li><p>Solution</p>
-<ul>
-<li>First install nokogiri by itself in Linux subsystem (‘sudo gem install nokogiri’), then try “bundle install” again!</li>
-</ul>
+<li><p>First install nokogiri by itself in Linux subsystem (‘sudo gem install nokogiri’), then try “bundle install” again!</p>
 </li>
 </ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ul>
-<li><ol>
-<li><a href="https://www.laptopmag.com/articles/use-bash-shell-windows-10" target="_blank" rel="noopener">How to Enable the Linux Bash Shell in Windows 10</a>.</li>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h2><ol>
+<li><a href="https://www.laptopmag.com/articles/use-bash-shell-windows-10" target="_blank" rel="noopener">How to Enable the Linux Bash Shell in Windows 10</a></li>
+<li><a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/" target="_blank" rel="noopener">Setting up your GitHub Pages site locally with Jekyll</a></li>
+<li><a href="https://jekyllrb.com/docs/installation/windows/" target="_blank" rel="noopener">Jekyll on Windows</a></li>
 </ol>
-</li>
-<li><ol start="2">
-<li><a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/" target="_blank" rel="noopener">Setting up your GitHub Pages site locally with Jekyll</a>.</li>
-</ol>
-</li>
-<li><ol start="3">
-<li><a href="https://jekyllrb.com/docs/installation/windows/" target="_blank" rel="noopener">Jekyll on Windows</a>.</li>
-</ol>
-</li>
-</ul>
 
         
         </div>
@@ -393,7 +353,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/14/github-page-jekyll/" data-id="cjxzlzhvu0008vsw0z2fkxbgk" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="http://ericzhng.github.io/eric-blogs/2018/09/14/github-page-jekyll/" data-id="cjykvg4sz000744w0stpm29o9" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -478,6 +438,11 @@ ga('send', 'pageview');
         </a>
     
     
+        <a href="/eric-blogs/2018/09/14/windows-wsl-environment/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Setup Linux environment (WSL) in Windows</div>
+        </a>
+    
 </nav>
 
 
@@ -497,7 +462,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/eric-blogs/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/eric-blogs/tags/Boot/" style="font-size: 10px;">Boot</a> <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 12.5px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Jupyter/" style="font-size: 10px;">Jupyter</a> <a href="/eric-blogs/tags/Operating-system/" style="font-size: 10px;">Operating system</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 12.5px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 12.5px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 17.5px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 15px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 15px;">vs-code</a>
+            <a href="/eric-blogs/tags/CUDA/" style="font-size: 10px;">CUDA</a> <a href="/eric-blogs/tags/Cygwin/" style="font-size: 10px;">Cygwin</a> <a href="/eric-blogs/tags/GitHub/" style="font-size: 10px;">GitHub</a> <a href="/eric-blogs/tags/Google-Colab/" style="font-size: 10px;">Google Colab</a> <a href="/eric-blogs/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/eric-blogs/tags/Jekyll/" style="font-size: 10px;">Jekyll</a> <a href="/eric-blogs/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/eric-blogs/tags/MinGW/" style="font-size: 10px;">MinGW</a> <a href="/eric-blogs/tags/Operating-System/" style="font-size: 10px;">Operating System</a> <a href="/eric-blogs/tags/PyCharm/" style="font-size: 12.5px;">PyCharm</a> <a href="/eric-blogs/tags/Python/" style="font-size: 10px;">Python</a> <a href="/eric-blogs/tags/Tensorflow/" style="font-size: 12.5px;">Tensorflow</a> <a href="/eric-blogs/tags/WSL/" style="font-size: 17.5px;">WSL</a> <a href="/eric-blogs/tags/Website/" style="font-size: 10px;">Website</a> <a href="/eric-blogs/tags/Windows/" style="font-size: 20px;">Windows</a> <a href="/eric-blogs/tags/bash/" style="font-size: 10px;">bash</a> <a href="/eric-blogs/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/eric-blogs/tags/cuda/" style="font-size: 10px;">cuda</a> <a href="/eric-blogs/tags/vs-code/" style="font-size: 15px;">vs-code</a>
         </div>
     </div>
 
@@ -511,19 +476,38 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="thumbnail">
+                            <a href="/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/eric-blogs/images/wsl-cygwin-mingw/wsl-cygwin-mingw.png)" alt="Compare the difference between Cygwin, MinGW and WSL" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/12/08/Difference-between-Big-and-Little-Endian-Byte-Order/" class="title">Difference between Big and Little Endian Byte Order</a></p>
-                            <p class="item-date"><time datetime="2018-12-08T23:11:53.000Z" itemprop="datePublished">2018-12-08</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2019/07/25/comparison-cygwin-mingw-wsl/" class="title">Compare the difference between Cygwin, MinGW and WSL</a></p>
+                            <p class="item-date"><time datetime="2019-07-25T04:00:00.000Z" itemprop="datePublished">2019-07-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/eric-blogs/2018/12/08/big-and-little-endian-byte-order/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/eric-blogs/images/big-small-edian.gif)" alt="Talking about Big and Little Endian Byte Order" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/12/08/big-and-little-endian-byte-order/" class="title">Talking about Big and Little Endian Byte Order</a></p>
+                            <p class="item-date"><time datetime="2018-12-08T05:00:00.000Z" itemprop="datePublished">2018-12-08</time></p>
                         </div>
                     </li>
                 
@@ -540,28 +524,9 @@ ga('send', 'pageview');
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/vs-code/">vs-code</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
                             <p class="item-title"><a href="/eric-blogs/2018/12/06/switch-terminals-in-vs-code/" class="title">Switch terminals in vs-code</a></p>
-                            <p class="item-date"><time datetime="2018-12-07T04:07:07.000Z" itemprop="datePublished">2018-12-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/eric-blogs/images_posts/acer-laptop-ssd-no-bootable-device.jpg)" alt="Laptop install SSD show error &#34;No Bootable Device&#34;" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Hardware/">Hardware</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Hardware/SSD/">SSD</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/12/06/acer-ssd-replace-no-boot-device/" class="title">Laptop install SSD show error &#34;No Bootable Device&#34;</a></p>
-                            <p class="item-date"><time datetime="2018-12-07T04:04:15.000Z" itemprop="datePublished">2018-12-06</time></p>
+                            <p class="item-date"><time datetime="2018-12-06T05:00:00.000Z" itemprop="datePublished">2018-12-06</time></p>
                         </div>
                     </li>
                 
@@ -571,15 +536,15 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Install Tensorflow (CPU) in PyCharm in Windows 10" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/tensorflow.jpg)" alt="Install Tensorflow (CPU) in PyCharm in Windows" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Python/">Python</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="title">Install Tensorflow (CPU) in PyCharm in Windows 10</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/17/tensorflow-pycharm/" class="title">Install Tensorflow (CPU) in PyCharm in Windows</a></p>
                             <p class="item-date"><time datetime="2018-10-17T04:00:00.000Z" itemprop="datePublished">2018-10-17</time></p>
                         </div>
                     </li>
@@ -590,7 +555,7 @@ ga('send', 'pageview');
                             <a href="/eric-blogs/2018/10/13/github-page-hexo/" class="thumbnail">
     
     
-        <span style="background-image:url(/eric-blogs/images/hexo-logo.png)" alt="Set up hexo for GitHub page" class="thumbnail-image"></span>
+        <span style="background-image:url(/eric-blogs/images/hexo-logo.png)" alt="Setup Hexo for GitHub Page in either Windows or WSL" class="thumbnail-image"></span>
     
 </a>
 
@@ -598,8 +563,8 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/eric-blogs/categories/Software/">Software</a><i class="fas fa-angle-right"></i><a class="article-category-link" href="/eric-blogs/categories/Software/Website/">Website</a></p>
-                            <p class="item-title"><a href="/eric-blogs/2018/10/13/github-page-hexo/" class="title">Set up hexo for GitHub page</a></p>
-                            <p class="item-date"><time datetime="2018-10-13T23:40:00.000Z" itemprop="datePublished">2018-10-13</time></p>
+                            <p class="item-title"><a href="/eric-blogs/2018/10/13/github-page-hexo/" class="title">Setup Hexo for GitHub Page in either Windows or WSL</a></p>
+                            <p class="item-date"><time datetime="2018-10-13T04:00:00.000Z" itemprop="datePublished">2018-10-13</time></p>
                         </div>
                     </li>
                 
